@@ -6,7 +6,7 @@ const projects = [
   {
     title: "BeBetter",
     description: "Платформа которая поможет вам саморазвиваться",
-    image: "/lovable-uploads/8a1f1f68-8130-48a1-aa21-d6c5a666370f.png",
+    image: "/lovable-uploads/5b5f502d-c863-455e-9af7-5509228f8467.png",
     github: "https://github.com/amirymax/BeBetter",
     tags: ["Python", "Django", "Bootstrap", "Telegram API"],
   },
