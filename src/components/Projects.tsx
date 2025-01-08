@@ -4,25 +4,32 @@ import { Button } from "./ui/button";
 
 const projects = [
   {
+    title: "BeBetter",
+    description: "Платформа которая поможет вам саморазвиваться",
+    image: "/lovable-uploads/8a1f1f68-8130-48a1-aa21-d6c5a666370f.png",
+    github: "https://github.com/amirymax/BeBetter",
+    tags: ["Python", "Django", "Bootstrap", "Telegram API"],
+  },
+  {
     title: "SofiAI",
-    description: "Умный AI-ассистент для Telegram, созданный с использованием OpenAI API",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    description: "Продвинутый голосовой ассистент с интеграцией машинного обучения для интерактивного и контекстно-зависимого взаимодействия",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
     github: "https://github.com/amirymax/SofiAI",
-    tags: ["Python", "OpenAI API", "Telegram API", "SQLite"],
+    tags: ["Python", "JavaScript", "Vosk", "Flask"],
   },
   {
     title: "TwitClone",
-    description: "Клон Twitter с основными функциями социальной сети",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    description: "Клон Twitter, разработанный с использованием Django",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
     github: "https://github.com/amirymax/TwitClone",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "MongoDB"],
+    tags: ["Python", "Django", "Bootstrap", "SQLite"],
   },
   {
     title: "MoodMonitorBot",
-    description: "Telegram бот для отслеживания настроения и эмоционального состояния",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    description: "Этот бот поможет определить ваше эмоциональное состояние на основе текста, аудио и видео",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
     github: "https://github.com/amirymax/MoodMonitorBot",
-    tags: ["Python", "Telegram API", "SQLite", "Data Analysis"],
+    tags: ["Python", "Aiogram", "OpenCV"],
   },
 ];
 
@@ -44,7 +51,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
