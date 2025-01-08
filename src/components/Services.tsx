@@ -45,10 +45,10 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Мои Услуги</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive solutions tailored to your needs, from web development to
-            programming education.
+            Комплексные решения, адаптированные под ваши потребности, от веб-разработки до
+            обучения программированию.
           </p>
         </motion.div>
 

@@ -30,22 +30,22 @@ const About = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Обо Мне</h2>
             <p className="text-muted-foreground mb-6">
-              I'm a passionate developer with expertise in web development, automation,
-              and programming education. With years of experience in creating
-              innovative solutions, I've helped numerous clients bring their ideas to
-              life.
+              Я увлеченный разработчик с опытом в веб-разработке, автоматизации
+              и обучении программированию. За годы работы в создании
+              инновационных решений я помог многим клиентам воплотить их идеи в
+              жизнь.
             </p>
             <p className="text-muted-foreground mb-6">
-              My journey in programming began with a curiosity to understand how
-              things work. Today, I channel that curiosity into creating elegant
-              solutions and helping others learn programming through mentorship and
-              training.
+              Мой путь в программировании начался с любопытства понять, как
+              работают вещи. Сегодня я направляю это любопытство на создание элегантных
+              решений и помощь другим в изучении программирования через наставничество и
+              обучение.
             </p>
             <Button className="group">
               <FileText className="mr-2 h-4 w-4" />
-              Download Resume
+              Скачать Резюме
             </Button>
           </motion.div>
         </div>

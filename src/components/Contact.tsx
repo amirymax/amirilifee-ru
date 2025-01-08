@@ -39,10 +39,10 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Связаться со Мной</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to learn programming? I'd love to hear
-            from you.
+            Есть проект или хотите изучать программирование? Буду рад обсудить
+            с вами.
           </p>
         </motion.div>
 
@@ -56,7 +56,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
-                  placeholder="Your Name"
+                  placeholder="Ваше Имя"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -66,7 +66,7 @@ const Contact = () => {
               <div>
                 <Input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder="Ваш Email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -75,7 +75,7 @@ const Contact = () => {
               </div>
               <div>
                 <Textarea
-                  placeholder="Your Message"
+                  placeholder="Ваше Сообщение"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -84,7 +84,7 @@ const Contact = () => {
                 />
               </div>
               <Button type="submit" className="w-full">
-                Send Message
+                Отправить Сообщение
               </Button>
             </form>
           </motion.div>
@@ -97,7 +97,7 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+              <h3 className="text-xl font-semibold mb-4">Контактная Информация</h3>
               <div className="space-y-4">
                 <a
                   href="mailto:contact@amirilifee.com"
@@ -128,10 +128,10 @@ const Contact = () => {
             </div>
 
             <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Quick Response</h3>
+              <h3 className="text-xl font-semibold mb-4">Быстрый Ответ</h3>
               <p className="text-muted-foreground mb-4">
-                Need an immediate response? Reach out via Telegram for faster
-                communication.
+                Нужен быстрый ответ? Свяжитесь со мной через Telegram для
+                оперативного общения.
               </p>
               <Button variant="secondary" className="w-full" asChild>
                 <a
@@ -140,7 +140,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <MessageSquare className="mr-2 h-4 w-4" />
-                  Message on Telegram
+                  Написать в Telegram
                 </a>
               </Button>
             </div>

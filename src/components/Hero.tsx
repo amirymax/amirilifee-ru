@@ -23,9 +23,9 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Hi, I'm{" "}
+              Привет, я{" "}
               <span className="text-gradient">Amirilifee</span>
-              <br />A Professional Developer
+              <br />Профессиональный Разработчик
             </h1>
           </motion.div>
 
@@ -35,8 +35,8 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-lg md:text-xl text-muted-foreground mb-8"
           >
-            I create elegant solutions through code, specializing in web development,
-            Telegram bots, and programming education.
+            Я создаю элегантные решения с помощью кода, специализируюсь на веб-разработке,
+            Telegram ботах и обучении программированию.
           </motion.p>
 
           <motion.div
@@ -46,11 +46,11 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button size="lg" className="group">
-              View My Work
+              Мои Работы
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button size="lg" variant="secondary">
-              Contact Me
+              Связаться
             </Button>
           </motion.div>
         </motion.div>

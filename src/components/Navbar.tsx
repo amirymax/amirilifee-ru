@@ -15,11 +15,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
-    { label: "Projects", href: "#projects" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Главная", href: "#home" },
+    { label: "Услуги", href: "#services" },
+    { label: "Проекты", href: "#projects" },
+    { label: "Обо мне", href: "#about" },
+    { label: "Контакты", href: "#contact" },
   ];
 
   return (
@@ -45,7 +45,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="secondary" className="ml-4">
-            Get in Touch
+            Связаться
           </Button>
         </div>
 
