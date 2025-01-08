@@ -4,27 +4,25 @@ import { Button } from "./ui/button";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with React and Node.js",
+    title: "SofiAI",
+    description: "Умный AI-ассистент для Telegram, созданный с использованием OpenAI API",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    github: "#",
-    demo: "#",
-    tags: ["React", "Node.js", "MongoDB"],
+    github: "https://github.com/amirymax/SofiAI",
+    tags: ["Python", "OpenAI API", "Telegram API", "SQLite"],
   },
   {
-    title: "Task Management Bot",
-    description: "Telegram bot for managing tasks and reminders",
+    title: "TwitClone",
+    description: "Клон Twitter с основными функциями социальной сети",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    github: "#",
-    tags: ["Python", "Telegram API", "SQLite"],
+    github: "https://github.com/amirymax/TwitClone",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "MongoDB"],
   },
   {
-    title: "Learning Platform",
-    description: "Online platform for programming education",
+    title: "MoodMonitorBot",
+    description: "Telegram бот для отслеживания настроения и эмоционального состояния",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    github: "#",
-    demo: "#",
-    tags: ["React", "Firebase", "Tailwind"],
+    github: "https://github.com/amirymax/MoodMonitorBot",
+    tags: ["Python", "Telegram API", "SQLite", "Data Analysis"],
   },
 ];
 
@@ -83,14 +81,6 @@ const Projects = () => {
                       GitHub
                     </a>
                   </Button>
-                  {project.demo && (
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
-                      </a>
-                    </Button>
-                  )}
                 </div>
               </div>
             </motion.div>
