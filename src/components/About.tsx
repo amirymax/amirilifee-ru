@@ -16,7 +16,7 @@ const About = () => {
           >
             <div className="aspect-square rounded-lg overflow-hidden">
               <img
-                src="/lovable-uploads/ee3bc3e8-8b4b-4f1e-8be7-80ac7068f36d.png"
+                src="/lovable-uploads/fa503710-1190-4914-a9b1-1668ddfcf673.png"
                 alt="Amirilifee"
                 className="object-cover w-full h-full"
               />
