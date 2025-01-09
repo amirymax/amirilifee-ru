@@ -36,7 +36,7 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="section-padding bg-secondary/5">
-      <div className="container">
+      <div className="container max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -61,21 +61,21 @@ const Projects = () => {
               viewport={{ once: true }}
               className="glass rounded-lg overflow-hidden hover-card"
             >
-              <div className="aspect-video relative overflow-hidden h-48 md:h-56">
+              <div className="aspect-video relative overflow-hidden h-40 md:h-48">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-contain transition-transform duration-300 hover:scale-110"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="p-3">
+                <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
+                <p className="text-muted-foreground mb-3 text-sm">{project.description}</p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary"
+                      className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary"
                     >
                       {tag}
                     </span>
