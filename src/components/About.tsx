@@ -16,7 +16,7 @@ const About = () => {
           >
             <div className="aspect-square rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                src="/lovable-uploads/ee3bc3e8-8b4b-4f1e-8be7-80ac7068f36d.png"
                 alt="Amirilifee"
                 className="object-cover w-full h-full"
               />
@@ -43,10 +43,16 @@ const About = () => {
               решений и помощь другим в изучении программирования через наставничество и
               обучение.
             </p>
-            <Button className="group">
-              <FileText className="mr-2 h-4 w-4" />
-              Скачать Резюме
-            </Button>
+            <a 
+              href="https://drive.google.com/file/d/1rAu9AYIxFAIw_iiwNejZtBxvlqT0ODVk/view?usp=drive_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="group">
+                <FileText className="mr-2 h-4 w-4" />
+                Скачать Резюме
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>
