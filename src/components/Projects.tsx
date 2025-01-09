@@ -13,7 +13,7 @@ const projects = [
   {
     title: "SofiAI",
     description: "Продвинутый голосовой ассистент с интеграцией машинного обучения для интерактивного и контекстно-зависимого взаимодействия",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    image: "/lovable-uploads/f817e49f-155d-4b13-a8d3-4c604d7fe143.png",
     github: "https://github.com/amirymax/SofiAI",
     tags: ["Python", "JavaScript", "Vosk", "Flask"],
   },
@@ -61,16 +61,16 @@ const Projects = () => {
               viewport={{ once: true }}
               className="glass rounded-lg overflow-hidden hover-card"
             >
-              <div className="aspect-video relative overflow-hidden">
+              <div className="aspect-video relative overflow-hidden h-48 md:h-56">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full transform transition-transform hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-contain transition-transform duration-300 hover:scale-110"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
+                <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
