@@ -61,13 +61,11 @@ const Projects = () => {
               viewport={{ once: true }}
               className="glass rounded-lg overflow-hidden hover-card"
             >
-              <div className="aspect-video relative overflow-hidden h-40 md:h-48">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-contain transition-transform duration-300 hover:scale-110"
-                />
-              </div>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-contain transition-transform duration-300 hover:scale-110"
+              />
               <div className="p-3">
                 <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
                 <p className="text-muted-foreground mb-3 text-sm">{project.description}</p>
