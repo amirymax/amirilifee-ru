@@ -1,28 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
 
 const Hero = () => {
-  const { language } = useLanguage();
-
-  const content = {
-    en: {
-      greeting: "Hi, I'm",
-      title: "Professional Developer",
-      description: "I create elegant solutions through code, specializing in web development, Telegram bots, and programming education.",
-      projectsButton: "My Works",
-      contactButton: "Contact",
-    },
-    ru: {
-      greeting: "Привет, я",
-      title: "Профессиональный Разработчик",
-      description: "Я создаю элегантные решения с помощью кода, специализируюсь на веб-разработке, Telegram ботах и обучении программированию.",
-      projectsButton: "Мои Работы",
-      contactButton: "Связаться",
-    },
-  };
-
   return (
     <section
       id="home"
@@ -42,9 +22,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <h1 className="text-3xl md:text-5xl font-bold mb-6 flex flex-col items-center">
-              <span>{content[language].greeting} <span className="text-gradient">Amiri</span></span>
-              <span>{content[language].title}</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 flex flex-col items-center">
+              <span>Привет, я <span className="text-gradient">Amiri</span></span>
+              <span>Профессиональный Разработчик</span>
             </h1>
           </motion.div>
 
@@ -54,7 +34,8 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-lg md:text-xl text-muted-foreground mb-8"
           >
-            {content[language].description}
+            Я создаю элегантные решения с помощью кода, специализируюсь на веб-разработке,
+            Telegram ботах и обучении программированию.
           </motion.p>
 
           <motion.div
@@ -64,11 +45,11 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button size="lg" className="group">
-              {content[language].projectsButton}
+              Мои Работы
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button size="lg" variant="secondary">
-              {content[language].contactButton}
+              Связаться
             </Button>
           </motion.div>
         </motion.div>
