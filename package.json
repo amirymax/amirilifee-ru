@@ -1,6 +1,5 @@
 {
   "name": "vite_react_shadcn_ts",
-  "homepage": "https://amirymax.github.io/amirilifee-ru/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +9,6 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "pre-deploy":"npm run build",
-    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
