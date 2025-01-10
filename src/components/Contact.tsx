@@ -100,20 +100,20 @@ const Contact = () => {
               <h3 className="text-xl font-semibold mb-4">Контактная Информация</h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:contact@amirilifee.com"
+                  href="mailto:amirymax@mail.com"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Mail className="h-5 w-5" />
-                  contact@amirilifee.com
+                  amirymax@mail.com
                 </a>
                 <a
-                  href="https://github.com/amirilifee"
+                  href="https://github.com/amirymax"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Github className="h-5 w-5" />
-                  github.com/amirilifee
+                  github.com/amirymax
                 </a>
                 <a
                   href="https://t.me/amirilifee"

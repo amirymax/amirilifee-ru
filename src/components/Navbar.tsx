@@ -45,8 +45,8 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <Button variant="secondary" className="ml-4">
-            Связаться
+          <Button variant="secondary" className="ml-4" asChild>
+            <a href="#contact">Связаться</a>
           </Button>
           <LanguageSwitcher />
         </div>
@@ -76,7 +76,9 @@ const Navbar = () => {
                   {item.label}
                 </a>
               ))}
-              <Button variant="secondary">Связаться</Button>
+              <Button variant="secondary" asChild>
+                <a href="#contact">Связаться</a>
+              </Button>
             </div>
           </div>
         )}
