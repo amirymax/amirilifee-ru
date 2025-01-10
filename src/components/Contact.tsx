@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Mail, Github, Send } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { Github, Mail, MessageSquare } from "lucide-react";
 import { useToast } from "./ui/use-toast";
 
 const Contact = () => {
@@ -13,85 +14,89 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validate form
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Ошибка",
-        description: "Пожалуйста, заполните все поля",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Show success message
     toast({
-      title: "Успешно",
-      description: "Ваше сообщение отправлено",
+      title: "Message sent!",
+      description: "Thank you for reaching out. I'll get back to you soon.",
     });
+    setFormData({ name: "", email: "", message: "" });
+  };
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
     <section id="contact" className="section-padding bg-secondary/5">
-      <div className="container max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Свяжитесь со Мной</h2>
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Связаться со Мной</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Готов обсудить ваш проект или ответить на любые вопросы. Не стесняйтесь
-            связаться со мной любым удобным способом.
+            Есть проект или хотите изучать программирование? Буду рад обсудить
+            с вами.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="glass p-6 rounded-lg">
-            <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
-                  placeholder="Ваше имя"
+                  placeholder="Ваше Имя"
+                  name="name"
                   value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                  onChange={handleChange}
+                  required
                 />
               </div>
               <div>
                 <Input
                   type="email"
-                  placeholder="Ваш email"
+                  placeholder="Ваш Email"
+                  name="email"
                   value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
+                  onChange={handleChange}
+                  required
                 />
               </div>
               <div>
                 <Textarea
-                  placeholder="Ваше сообщение"
+                  placeholder="Ваше Сообщение"
+                  name="message"
                   value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
+                  onChange={handleChange}
+                  required
                   className="min-h-[150px]"
                 />
               </div>
               <Button type="submit" className="w-full">
-                Отправить
-                <Send className="ml-2 h-4 w-4" />
+                Отправить Сообщение
               </Button>
             </form>
-          </div>
+          </motion.div>
 
-          <div className="glass p-6 rounded-lg">
-            <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div>
               <h3 className="text-xl font-semibold mb-4">Контактная Информация</h3>
               <div className="space-y-4">
                 <a
@@ -116,32 +121,30 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  <svg
-                    className="h-5 w-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M8.5 12.5L11 15L15.5 9"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  @amirilifee
+                  <MessageSquare className="h-5 w-5" />
+                  t.me/amirilifee
                 </a>
               </div>
             </div>
-          </div>
+
+            <div className="glass p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Быстрый Ответ</h3>
+              <p className="text-muted-foreground mb-4">
+                Нужен быстрый ответ? Свяжитесь со мной через Telegram для
+                оперативного общения.
+              </p>
+              <Button variant="secondary" className="w-full" asChild>
+                <a
+                  href="https://t.me/amirilifee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageSquare className="mr-2 h-4 w-4" />
+                  Написать в Telegram
+                </a>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
