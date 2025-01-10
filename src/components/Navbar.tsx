@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,16 +48,19 @@ const Navbar = () => {
           <Button variant="secondary" className="ml-4">
             Связаться
           </Button>
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile Navigation */}
-        <button
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
         {/* Mobile Menu */}
         {isOpen && (
@@ -72,7 +76,7 @@ const Navbar = () => {
                   {item.label}
                 </a>
               ))}
-              <Button variant="secondary">Get in Touch</Button>
+              <Button variant="secondary">Связаться</Button>
             </div>
           </div>
         )}
