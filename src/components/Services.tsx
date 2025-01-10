@@ -4,33 +4,33 @@ import { motion } from "framer-motion";
 const services = [
   {
     icon: Code2,
-    title: "Website Development",
-    description: "Creating modern, responsive websites with cutting-edge technologies.",
+    title: "Веб-разработка",
+    description: "Создание современных, адаптивных веб-сайтов с использованием передовых технологий.",
   },
   {
     icon: Bot,
-    title: "Telegram Bot Creation",
-    description: "Developing custom Telegram bots for various purposes.",
+    title: "Создание Telegram Ботов",
+    description: "Разработка пользовательских Telegram ботов для различных целей.",
   },
   {
     icon: BookOpen,
-    title: "Python Programming",
-    description: "Teaching Python programming fundamentals to beginners.",
+    title: "Обучение Python",
+    description: "Обучение основам программирования на Python для начинающих.",
   },
   {
     icon: Users,
-    title: "Individual Mentorship",
-    description: "One-on-one guidance for aspiring developers.",
+    title: "Индивидуальное Наставничество",
+    description: "Персональное руководство для начинающих разработчиков.",
   },
   {
     icon: MessageSquare,
-    title: "Bot Training",
-    description: "Comprehensive training on creating and managing Telegram bots.",
+    title: "Обучение Разработке Ботов",
+    description: "Комплексное обучение созданию и управлению Telegram ботами.",
   },
   {
     icon: Binary,
-    title: "Algorithm Training",
-    description: "Learning essential algorithms and problem-solving techniques.",
+    title: "Обучение Алгоритмам",
+    description: "Изучение основных алгоритмов и техник решения задач.",
   },
 ];
 
