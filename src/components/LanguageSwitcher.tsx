@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -6,11 +5,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { useLanguage } from "@/context/LanguageContext";
 
 type Language = "ru" | "en";
 
 const LanguageSwitcher = () => {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>("ru");
+  const { language, setLanguage } = useLanguage();
 
   const languages = {
     en: {
@@ -24,16 +24,14 @@ const LanguageSwitcher = () => {
   };
 
   const handleLanguageChange = (lang: Language) => {
-    setCurrentLanguage(lang);
-    // Here you can add logic to change the language throughout the app
-    // For now, we'll just update the state
+    setLanguage(lang);
   };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="w-16 px-2">
-          <span className="text-xl">{languages[currentLanguage].flag}</span>
+          <span className="text-xl">{languages[language].flag}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
