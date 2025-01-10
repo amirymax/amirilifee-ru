@@ -22,10 +22,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Привет, я{" "}
-              <span className="text-gradient">Amirilifee</span>
-              <br />Профессиональный Разработчик
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 flex flex-col items-center">
+              <span>Привет, я <span className="text-gradient">Amiri</span></span>
+              <span>Профессиональный Разработчик</span>
             </h1>
           </motion.div>
 
