@@ -9,9 +9,20 @@ import { Link } from "react-router-dom";
 const Roadmaps = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+        <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? "glass py-4" : "py-6"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-gradient">
-          Amiri | Главное
+          Amiri
         </Link>
+        </div>
+          </nav>
+
+
+        
       <div className="min-h-screen pt-20 section-padding">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-gradient">Roadmaps</h1>
