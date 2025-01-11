@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -49,7 +50,21 @@ const Hero = () => {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button size="lg" variant="secondary">
-              Связаться
+              <a href="#contact">Связаться</a>
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="mt-4"
+          >
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/roadmaps" className="group">
+                Дорожные карты
+                <BookOpen className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </motion.div>
         </motion.div>
