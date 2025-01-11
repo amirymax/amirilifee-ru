@@ -1,28 +1,36 @@
+import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PythonRoadmap } from "@/components/roadmaps/PythonRoadmap";
 import { DjangoRoadmap } from "@/components/roadmaps/DjangoRoadmap";
 import { TelegramRoadmap } from "@/components/roadmaps/TelegramRoadmap";
 import { AlgorithmsRoadmap } from "@/components/roadmaps/AlgorithmsRoadmap";
-import Navbar from "@/components/Navbar";
 import { Link } from "react-router-dom";
 
 const Roadmaps = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    // <div className="min-h-screen bg-background text-foreground">
-        <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "glass py-4" : "py-6"
-      }`}
-    >
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-gradient">
-          Amiri
-        </Link>
+    <div>
+      <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          isScrolled ? "glass py-4" : "py-6"
+        }`}
+      >
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <Link to="/" className="text-2xl font-bold text-gradient">
+            Amiri
+          </Link>
         </div>
-          </nav>
+      </nav>
 
-
-        
       <div className="min-h-screen pt-20 section-padding">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-gradient">Roadmaps</h1>
@@ -53,7 +61,7 @@ const Roadmaps = () => {
           </Tabs>
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 
