@@ -36,35 +36,12 @@ const Roadmaps = () => {
           <h1 className="text-4xl font-bold mb-8 text-gradient">Roadmaps</h1>
           
           <Tabs defaultValue="python" className="w-full">
-            <TabsList className="mb-8 flex flex-wrap gap-2 justify-start">
-                  <TabsTrigger
-                    value="python"
-                    className="flex-1 sm:flex-none text-center min-w-[100px] px-2 py-1"
-                  >
-                    Python
-                  </TabsTrigger>
-              
-                  <TabsTrigger
-                    value="django"
-                    className="flex-1 sm:flex-none text-center min-w-[100px] px-2 py-1"
-                  >
-                    Django
-                  </TabsTrigger>
-              </TabsList>
-            <TabsList className="mb-8 flex flex-wrap gap-2 justify-start">
-                  <TabsTrigger
-                    value="telegram"
-                    className="flex-1 sm:flex-none text-center min-w-[150px] px-2 py-1"
-                  >
-                    Создание телеграм бота
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="algorithms"
-                    className="flex-1 sm:flex-none text-center min-w-[120px] px-2 py-1"
-                  >
-                    Алгоритмы
-                  </TabsTrigger>
-                </TabsList>
+            <TabsList className="mb-8 flex flex-wrap gap-4 justify-start">
+              <TabsTrigger value="python" className="flex-grow sm:flex-grow-0">Python</TabsTrigger>
+              <TabsTrigger value="django" className="flex-grow sm:flex-grow-0">Django</TabsTrigger>
+              <TabsTrigger value="telegram" className="flex-grow sm:flex-grow-0">Создание телеграм бота</TabsTrigger>
+              <TabsTrigger value="algorithms" className="flex-grow sm:flex-grow-0">Алгоритмы</TabsTrigger>
+            </TabsList>
 
 
             <TabsContent value="python">
