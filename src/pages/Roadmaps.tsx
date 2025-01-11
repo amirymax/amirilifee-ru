@@ -36,7 +36,7 @@ const Roadmaps = () => {
           <h1 className="text-4xl font-bold mb-8 text-gradient">Roadmaps</h1>
           
           <Tabs defaultValue="python" className="w-full">
-            <TabsList className="mb-8 flex flex-wrap gap-2 justify-start">
+            <TabsList className="mb-8 flex flex-wrap gap-4 justify-start">
               <TabsTrigger value="python" className="flex-grow sm:flex-grow-0">Python</TabsTrigger>
               <TabsTrigger value="django" className="flex-grow sm:flex-grow-0">Django</TabsTrigger>
               <TabsTrigger value="telegram" className="flex-grow sm:flex-grow-0">Создание телеграм бота</TabsTrigger>
