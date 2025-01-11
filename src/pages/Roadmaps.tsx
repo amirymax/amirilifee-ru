@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 
 const Roadmaps = () => {
   return (
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
     <div className="min-h-screen pt-20 section-padding">
       <div className="container mx-auto">
@@ -38,6 +39,7 @@ const Roadmaps = () => {
         </Tabs>
       </div>
     </div>
+      </div>
   );
 };
 
