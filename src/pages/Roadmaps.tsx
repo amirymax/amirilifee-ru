@@ -37,31 +37,34 @@ const Roadmaps = () => {
           
           <Tabs defaultValue="python" className="w-full">
             <TabsList className="mb-8 flex flex-wrap gap-2 justify-start">
-  <TabsTrigger
-    value="python"
-    className="flex-1 sm:flex-none text-center min-w-[100px] px-2 py-1"
-  >
-    Python
-  </TabsTrigger>
-  <TabsTrigger
-    value="django"
-    className="flex-1 sm:flex-none text-center min-w-[100px] px-2 py-1"
-  >
-    Django
-  </TabsTrigger>
-  <TabsTrigger
-    value="telegram"
-    className="flex-1 sm:flex-none text-center min-w-[150px] px-2 py-1"
-  >
-    Создание телеграм бота
-  </TabsTrigger>
-  <TabsTrigger
-    value="algorithms"
-    className="flex-1 sm:flex-none text-center min-w-[120px] px-2 py-1"
-  >
-    Алгоритмы
-  </TabsTrigger>
-</TabsList>
+                  <TabsTrigger
+                    value="python"
+                    className="flex-1 sm:flex-none text-center min-w-[100px] px-2 py-1"
+                  >
+                    Python
+                  </TabsTrigger>
+              
+                  <TabsTrigger
+                    value="django"
+                    className="flex-1 sm:flex-none text-center min-w-[100px] px-2 py-1"
+                  >
+                    Django
+                  </TabsTrigger>
+              </TabsList>
+            <TabsList className="mb-8 flex flex-wrap gap-2 justify-start">
+                  <TabsTrigger
+                    value="telegram"
+                    className="flex-1 sm:flex-none text-center min-w-[150px] px-2 py-1"
+                  >
+                    Создание телеграм бота
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="algorithms"
+                    className="flex-1 sm:flex-none text-center min-w-[120px] px-2 py-1"
+                  >
+                    Алгоритмы
+                  </TabsTrigger>
+                </TabsList>
 
 
             <TabsContent value="python">
