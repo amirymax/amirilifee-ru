@@ -9,11 +9,9 @@ import { Link } from "react-router-dom";
 const Roadmaps = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-gradient">
           Amiri | Главное
         </Link>
-      </div>
       <div className="min-h-screen pt-20 section-padding">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-gradient">Roadmaps</h1>
