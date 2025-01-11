@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Roadmaps = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    // <div className="min-h-screen bg-background text-foreground">
         <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled ? "glass py-4" : "py-6"
@@ -53,7 +53,7 @@ const Roadmaps = () => {
           </Tabs>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 
