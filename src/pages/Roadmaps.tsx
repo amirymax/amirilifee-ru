@@ -7,8 +7,8 @@ import Navbar from "@/components/Navbar";
 
 const Roadmaps = () => {
   return (
-    <div className="min-h-screen pt-20 section-padding">
       <Navbar />
+    <div className="min-h-screen pt-20 section-padding">
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-gradient">Roadmaps</h1>
         
