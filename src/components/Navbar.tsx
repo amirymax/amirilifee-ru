@@ -18,11 +18,11 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Главная", href: "/" },
-    { label: "Услуги", href: "/#services" },
-    { label: "Проекты", href: "/#projects" },
-    { label: "Обо мне", href: "/#about" },
+    { label: "Услуги", href: "#services" },
+    { label: "Проекты", href: "#projects" },
+    { label: "Обо мне", href: "#about" },
     { label: "Roadmaps", href: "/roadmaps" },
-    { label: "Контакты", href: "/#contact" },
+    { label: "Контакты", href: "#contact" },
   ];
 
   return (
