@@ -64,7 +64,7 @@ const Roadmaps = () => {
           onClick={handleContactClick}
           >
             <MessageCircle className="h-5 w-5" />
-            Нужен ментор? Оставь заявку
+            Нужен ментор?<br />Оставь заявку
           </Button>
       </div>
     </div>
