@@ -73,7 +73,9 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <Dialog open={isDialogOpen} onOpenChange={(open) => {
+          if (!open) setIsDialogOpen(false);
+        }}>
           <DialogTrigger asChild>
             <Button className="w-full" variant="default">
               Нужен ментор? Оставь заявку
