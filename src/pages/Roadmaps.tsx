@@ -74,52 +74,53 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-          <DialogTrigger asChild>
-            <Button className="w-full" variant="default">
-              Нужен ментор? Оставь заявку
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle>Оставить заявку на менторство</DialogTitle>
-            </DialogHeader>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <Input
-                  placeholder="Ваше Имя"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Ваш Email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <Textarea
-                  placeholder="Ваше Сообщение"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="min-h-[150px]"
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                Отправить Сообщение
-              </Button>
-            </form>
-          </DialogContent>
-        </Dialog>
+        <Dialog open={isDialogOpen} onOpenChange={(open) => setIsDialogOpen(open)}>
+  <DialogTrigger asChild>
+    <Button className="w-full" variant="default">
+      Нужен ментор? Оставь заявку
+    </Button>
+  </DialogTrigger>
+  <DialogContent className="sm:max-w-[425px]">
+    <DialogHeader>
+      <DialogTitle>Оставить заявку на менторство</DialogTitle>
+    </DialogHeader>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
+        <Input
+          placeholder="Ваше Имя"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <Input
+          type="email"
+          placeholder="Ваш Email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <Textarea
+          placeholder="Ваше Сообщение"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          className="min-h-[150px]"
+        />
+      </div>
+      <Button type="submit" className="w-full">
+        Отправить Сообщение
+      </Button>
+    </form>
+  </DialogContent>
+</Dialog>
+
       </div>
     </div>
   );
