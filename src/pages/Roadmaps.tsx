@@ -50,21 +50,15 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-{/*         <Button 
-          size="lg" 
-          className="w-full gap-2"
-          onClick={handleContactClick}
-        >
-          
-          Нужен ментор? Оставь заявку
-        </Button> */}
         <Button
             size="lg"
             className="gap-2 text-sm sm:text-base"
           onClick={handleContactClick}
           >
             <MessageCircle className="h-5 w-5" />
-            Нужен ментор?<br />Оставь заявку
+            <span className="block">
+              Нужен ментор?<br />Оставь заявку
+            </span>
           </Button>
       </div>
     </div>
