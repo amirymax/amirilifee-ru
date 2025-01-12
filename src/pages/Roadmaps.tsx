@@ -8,10 +8,26 @@ import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 
 const Roadmaps = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("python");
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +36,21 @@ const Roadmaps = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Сообщение отправлено!",
+      description: "Спасибо за обращение. Мы свяжемся с вами в ближайшее время.",
+    });
+    setFormData({ name: "", email: "", message: "" });
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const roadmapTabs = [
     { name: "Python", value: "python" },
@@ -41,15 +72,52 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-        <Button 
-          className="w-full" 
-          variant="default" 
-          asChild
-        >
-          <a href="/#contact">
-            Нужен ментор? Оставь заявку
-          </a>
-        </Button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button className="w-full" variant="default">
+              Нужен ментор? Оставь заявку
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Оставить заявку на менторство</DialogTitle>
+            </DialogHeader>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <Input
+                  placeholder="Ваше Имя"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <Input
+                  type="email"
+                  placeholder="Ваш Email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <Textarea
+                  placeholder="Ваше Сообщение"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="min-h-[150px]"
+                />
+              </div>
+              <Button type="submit" className="w-full">
+                Отправить Сообщение
+              </Button>
+            </form>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );
@@ -86,16 +154,16 @@ const Roadmaps = () => {
 
           <main className="flex-1 lg:pl-8">
             <Tabs value={activeTab} className="w-full">
-              <TabsContent value="python">
+              <TabsContent value="python" data-value="python">
                 <PythonRoadmap />
               </TabsContent>
-              <TabsContent value="django">
+              <TabsContent value="django" data-value="django">
                 <DjangoRoadmap />
               </TabsContent>
-              <TabsContent value="telegram">
+              <TabsContent value="telegram" data-value="telegram">
                 <TelegramRoadmap />
               </TabsContent>
-              <TabsContent value="algorithms">
+              <TabsContent value="algorithms" data-value="algorithms">
                 <AlgorithmsRoadmap />
               </TabsContent>
             </Tabs>
