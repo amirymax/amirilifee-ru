@@ -53,15 +53,16 @@ const Roadmaps = () => {
       <div className="mt-4 border-t pt-4">
         <Button
           size="lg"
-          className="w-full py-5 px-6 gap-2 text-sm sm:text-base flex items-center justify-center leading-relaxed rounded-lg shadow-lg"
+          className="w-full py-6 px-6 gap-3 text-sm sm:text-base flex items-center justify-center leading-relaxed rounded-lg shadow-lg"
           onClick={handleContactClick}
         >
-          <MessageCircle className="h-8 w-8" /> {/* Увеличиваем иконку */}
+          <MessageCircle className="h-10 w-10" /> {/* Размер иконки */}
           <span className="block text-center">
             Нужен ментор?<br />Оставь заявку
           </span>
         </Button>
-    </div>
+      </div>
+
 
 
 
