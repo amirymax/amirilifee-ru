@@ -57,7 +57,7 @@ const Roadmaps = () => {
             onClick={handleContactClick}
             style={{height: '60px'}}
           >
-            <MessageCircle className="h-10 w-10" style={{height: '40px'}} /> {/* Размер иконки */}
+            <MessageCircle className="h-10 w-10" style={{height: '40px', width: '40px'}} /> {/* Размер иконки */}
               Нужен ментор?<br />Оставь заявку
           </Button>
       </div>
