@@ -23,6 +23,7 @@ const Roadmaps = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("python");
   const { toast } = useToast();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -44,6 +45,7 @@ const Roadmaps = () => {
       description: "Спасибо за обращение. Мы свяжемся с вами в ближайшее время.",
     });
     setFormData({ name: "", email: "", message: "" });
+    setIsDialogOpen(false);
   };
 
   const handleChange = (
@@ -72,7 +74,7 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-        <Dialog>
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button className="w-full" variant="default">
               Нужен ментор? Оставь заявку
