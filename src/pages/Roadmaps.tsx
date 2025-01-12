@@ -5,7 +5,7 @@ import { DjangoRoadmap } from "@/components/roadmaps/DjangoRoadmap";
 import { TelegramRoadmap } from "@/components/roadmaps/TelegramRoadmap";
 import { AlgorithmsRoadmap } from "@/components/roadmaps/AlgorithmsRoadmap";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -41,11 +41,15 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-        <Link to="/#contact">
-          <Button className="w-full" variant="default">
+        <Button 
+          className="w-full" 
+          variant="default" 
+          asChild
+        >
+          <a href="/#contact">
             Нужен ментор? Оставь заявку
-          </Button>
-        </Link>
+          </a>
+        </Button>
       </div>
     </div>
   );
