@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { PythonRoadmap } from "@/components/roadmaps/PythonRoadmap";
 import { DjangoRoadmap } from "@/components/roadmaps/DjangoRoadmap";
 import { TelegramRoadmap } from "@/components/roadmaps/TelegramRoadmap";
 import { AlgorithmsRoadmap } from "@/components/roadmaps/AlgorithmsRoadmap";
 import { Link } from "react-router-dom";
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Roadmaps = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeTab, setActiveTab] = useState("python");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,28 @@ const Roadmaps = () => {
     { name: "Алгоритмы", value: "algorithms" },
   ];
 
+  const SideMenu = () => (
+    <div className="flex flex-col gap-2">
+      {roadmapTabs.map((tab) => (
+        <Button
+          key={tab.value}
+          variant={activeTab === tab.value ? "secondary" : "ghost"}
+          className="w-full justify-start"
+          onClick={() => setActiveTab(tab.value)}
+        >
+          {tab.name}
+        </Button>
+      ))}
+      <div className="mt-4 border-t pt-4">
+        <Link to="/#contact">
+          <Button className="w-full" variant="default">
+            Нужен ментор? Оставь заявку
+          </Button>
+        </Link>
+      </div>
+    </div>
+  );
+
   return (
     <div>
       <nav
@@ -37,52 +61,27 @@ const Roadmaps = () => {
           <Link to="/" className="text-2xl font-bold text-gradient">
             Amiri | Главное
           </Link>
+          <Sheet>
+            <SheetTrigger asChild className="lg:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-[240px] sm:w-[280px]">
+              <SideMenu />
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
 
       <div className="min-h-screen pt-20 section-padding">
         <div className="container mx-auto flex flex-col lg:flex-row">
-          <aside className="w-full lg:w-1/4 lg:pr-8 sticky top-20">
-            <Tabs defaultValue="python" orientation="vertical">
-              <TabsList className="flex flex-col gap-4">
-                <TabsTrigger
-                  value="python"
-                  className="w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Python
-                </TabsTrigger>
-                <TabsTrigger
-                  value="django"
-                  className="w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Django
-                </TabsTrigger>
-                <TabsTrigger
-                  value="telegram"
-                  className="w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Создание телеграм бота
-                </TabsTrigger>
-                <TabsTrigger
-                  value="algorithms"
-                  className="w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Алгоритмы
-                </TabsTrigger>
-              </TabsList>
-              <div className="mt-8">
-                <Link
-                  to="/#contact"
-                  className="block text-center bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600 transition"
-                >
-                  Нужен ментор? Оставь заявку
-                </Link>
-              </div>
-            </Tabs>
+          <aside className="hidden lg:block w-64 sticky top-24 h-fit">
+            <SideMenu />
           </aside>
 
-          <main className="w-full lg:w-3/4">
-            <Tabs defaultValue="python" className="w-full">
+          <main className="flex-1 lg:pl-8">
+            <Tabs value={activeTab} className="w-full">
               <TabsContent value="python">
                 <PythonRoadmap />
               </TabsContent>
