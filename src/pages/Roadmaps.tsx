@@ -8,27 +8,10 @@ import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
 
 const Roadmaps = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("python");
-  const { toast } = useToast();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,21 +20,6 @@ const Roadmaps = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    toast({
-      title: "Сообщение отправлено!",
-      description:
-        "Спасибо за обращение. Мы свяжемся с вами в ближайшее время.",
-    });
-    setFormData({ name: "", email: "", message: "" });
-    setIsDialogOpen(false);
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const roadmapTabs = [
     { name: "Python", value: "python" },
@@ -73,54 +41,11 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-        <Dialog open={isDialogOpen} onOpenChange={(open) => {
-          if (!open) setIsDialogOpen(false);
-        }}>
-          <DialogTrigger asChild>
-            <Button className="w-full" variant="default">
-              Нужен ментор? Оставь заявку
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle>Оставить заявку на менторство</DialogTitle>
-            </DialogHeader>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <Input
-                  placeholder="Ваше Имя"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Ваш Email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <Textarea
-                  placeholder="Ваше Сообщение"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="min-h-[150px]"
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                Отправить Сообщение
-              </Button>
-            </form>
-          </DialogContent>
-        </Dialog>
+        <a href="/#contact" className="w-full">
+          <Button className="w-full" variant="default">
+            Нужен ментор? Оставь заявку
+          </Button>
+        </a>
       </div>
     </div>
   );
