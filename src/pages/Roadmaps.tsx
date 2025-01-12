@@ -57,7 +57,7 @@ const Roadmaps = () => {
             onClick={handleContactClick}
             style={{height: '60px'}}
           >
-            <MessageCircle size={64px} />
+{/*             <MessageCircle size={64} /> */}
               Нужен ментор?<br />Оставь заявку 
           </Button>
       </div>
