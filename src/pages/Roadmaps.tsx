@@ -41,14 +41,25 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-        <a href="/#contact" className="w-full">
-          <Button className="w-full" variant="default">
+          Button 
+            size="lg" 
+            className="gap-2"
+            onClick={handleContactClick}
+          >
+            <MessageCircle  className="w-full" variant="default" />
             Нужен ментор? Оставь заявку
           </Button>
-        </a>
       </div>
     </div>
   );
+
+  const handleContactClick = () => {
+    navigate('/#contact');
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      contactSection?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   return (
     <div>
