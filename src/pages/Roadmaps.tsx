@@ -4,14 +4,15 @@ import { PythonRoadmap } from "@/components/roadmaps/PythonRoadmap";
 import { DjangoRoadmap } from "@/components/roadmaps/DjangoRoadmap";
 import { TelegramRoadmap } from "@/components/roadmaps/TelegramRoadmap";
 import { AlgorithmsRoadmap } from "@/components/roadmaps/AlgorithmsRoadmap";
-import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Roadmaps = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("python");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,14 @@ const Roadmaps = () => {
     { name: "Алгоритмы", value: "algorithms" },
   ];
 
+  const handleContactClick = () => {
+    navigate('/#contact');
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      contactSection?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   const SideMenu = () => (
     <div className="flex flex-col gap-2">
       {roadmapTabs.map((tab) => (
@@ -41,25 +50,17 @@ const Roadmaps = () => {
         </Button>
       ))}
       <div className="mt-4 border-t pt-4">
-          Button 
-            size="lg" 
-            className="gap-2"
-            onClick={handleContactClick}
-          >
-            <MessageCircle  className="w-full" variant="default" />
-            Нужен ментор? Оставь заявку
-          </Button>
+        <Button 
+          size="lg" 
+          className="w-full gap-2"
+          onClick={handleContactClick}
+        >
+          <MessageCircle className="h-5 w-5" />
+          Нужен ментор? Оставь заявку
+        </Button>
       </div>
     </div>
   );
-
-  const handleContactClick = () => {
-    navigate('/#contact');
-    setTimeout(() => {
-      const contactSection = document.getElementById('contact');
-      contactSection?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
 
   return (
     <div>
