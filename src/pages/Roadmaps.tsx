@@ -53,9 +53,9 @@ const Roadmaps = () => {
       <div className="mt-8 border-t pt-6"> {/* Увеличено вертикальное расстояние */}
           <Button
             size="lg"
-            className="w-full py-500 px-6 gap-3 text-sm sm:text-base flex items-center justify-center leading-relaxed rounded-lg shadow-lg"
+            className="w-full py-6 px-6 gap-3 text-sm sm:text-base flex items-center justify-center leading-relaxed rounded-lg shadow-lg"
             onClick={handleContactClick}
-            style={{height: '30px'}}
+            style={{height: '60px'}}
           >
             <MessageCircle className="h-10 w-10" /> {/* Размер иконки */}
               Нужен ментор?<br />Оставь заявку
