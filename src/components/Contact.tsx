@@ -5,9 +5,11 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Github, Mail, MessageSquare } from "lucide-react";
 import { useToast } from "./ui/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useLanguage(); // Используем перевод
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,8 +19,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: t("contact.form.sendSuccess"),
+      description: t("contact.form.sendMessage"),
     });
     setFormData({ name: "", email: "", message: "" });
   };
@@ -39,14 +41,16 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Связаться со Мной</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t("contact.title")}
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Есть проект или хотите изучать программирование? Буду рад обсудить
-            с вами.
+            {t("contact.description")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Форма */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,7 +60,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
-                  placeholder="Ваше Имя"
+                  placeholder={t("contact.form.name")}
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -66,7 +70,7 @@ const Contact = () => {
               <div>
                 <Input
                   type="email"
-                  placeholder="Ваш Email"
+                  placeholder={t("contact.form.email")}
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -75,7 +79,7 @@ const Contact = () => {
               </div>
               <div>
                 <Textarea
-                  placeholder="Ваше Сообщение"
+                  placeholder={t("contact.form.message")}
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -84,11 +88,12 @@ const Contact = () => {
                 />
               </div>
               <Button type="submit" className="w-full">
-                Отправить Сообщение
+                {t("contact.form.send")}
               </Button>
             </form>
           </motion.div>
 
+          {/* Контактная информация */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -97,7 +102,9 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl font-semibold mb-4">Контактная Информация</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                {t("contact.info.title")}
+              </h3>
               <div className="space-y-4">
                 <a
                   href="mailto:amirymax@mail.com"
@@ -128,10 +135,11 @@ const Contact = () => {
             </div>
 
             <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Быстрый Ответ</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                {t("contact.info.quickResponse.title")}
+              </h3>
               <p className="text-muted-foreground mb-4">
-                Нужен быстрый ответ? Свяжитесь со мной через Telegram для
-                оперативного общения.
+                {t("contact.info.quickResponse.description")}
               </p>
               <Button variant="secondary" className="w-full" asChild>
                 <a
@@ -140,7 +148,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <MessageSquare className="mr-2 h-4 w-4" />
-                  Написать в Telegram
+                  {t("contact.info.quickResponse.button")}
                 </a>
               </Button>
             </div>
