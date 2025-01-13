@@ -12,8 +12,8 @@ const projects = [
     tags: ["Python", "Django", "Bootstrap", "Telegram API"],
   },
   {
-    titleKey: "projects.items.sofia.title",
-    descriptionKey: "projects.items.sofia.description",
+    titleKey: "projects.items.sofiai.title",
+    descriptionKey: "projects.items.sofiai.description",
     image: "/lovable-uploads/f817e49f-155d-4b13-a8d3-4c604d7fe143.png",
     github: "https://github.com/amirymax/SofiAI",
     tags: ["Python", "JavaScript", "Vosk", "Flask"],
@@ -26,8 +26,8 @@ const projects = [
     tags: ["Python", "Django", "Bootstrap", "SQLite"],
   },
   {
-    titleKey: "projects.items.moodmonitor.title",
-    descriptionKey: "projects.items.moodmonitor.description",
+    titleKey: "projects.items.moodmonitorbot.title",
+    descriptionKey: "projects.items.moodmonitorbot.description",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
     github: "https://github.com/amirymax/MoodMonitorBot",
     tags: ["Python", "Aiogram", "OpenCV"],
