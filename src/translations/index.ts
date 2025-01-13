@@ -48,7 +48,25 @@ export const translations = {
     },
     projects: {
       title: "Featured Projects",
-      description: "Showcasing my best work, demonstrating my skills and experience across various technologies."
+      description: "Showcasing my best work, demonstrating my skills and experience across various technologies.",
+      items: [
+        {
+          title: "BeBetter",
+          description: "A platform to help you with self-development."
+        },
+        {
+          title: "SofiAI",
+          description: "An advanced voice assistant with machine learning integration for interactive and context-aware interaction."
+        },
+        {
+          title: "TwitClone",
+          description: "A Twitter clone built using Django."
+        },
+        {
+          title: "MoodMonitorBot",
+          description: "This bot helps analyze your emotional state based on text, audio, and video."
+        }
+      ]
     },
     about: {
       title: "About Me",
@@ -124,7 +142,25 @@ export const translations = {
     },
     projects: {
       title: "Избранные Проекты",
-      description: "Демонстрация моих лучших работ, показывающая мои навыки и опыт в различных технологиях."
+      description: "Демонстрация моих лучших работ, показывающая мои навыки и опыт в различных технологиях.",
+      items: [
+        {
+          title: "BeBetter",
+          description: "Платформа которая поможет вам саморазвиваться"
+        },
+        {
+          title: "SofiAI",
+          description: "Продвинутый голосовой ассистент с интеграцией машинного обучения для интерактивного и контекстно-зависимого взаимодействия"
+        },
+        {
+          title: "TwitClone",
+          description: "Клон Twitter, разработанный с использованием Django"
+        },
+        {
+          title: "MoodMonitorBot",
+          description: "Этот бот поможет определить ваше эмоциональное состояние на основе текста, аудио и видео"
+        }
+      ]
     },
     about: {
       title: "Обо Мне",
