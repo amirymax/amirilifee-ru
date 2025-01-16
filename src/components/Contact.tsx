@@ -105,7 +105,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold mb-4">
                 {t("contact.info.title")}
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <a
                   href="mailto:amirymax@mail.com"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
@@ -113,42 +113,40 @@ const Contact = () => {
                   <Mail className="h-5 w-5" />
                   amirymax@mail.com
                 </a>
-                <a
-                  href="https://github.com/amirymax"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Github className="h-5 w-5" />
-                  github.com/amirymax
-                </a>
-                <a
-                  href="https://instagram.com/amirilifee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Instagram className="h-5 w-5" />
-                  instagram.com/amirilifee
-                </a>
-                <a
-                  href="https://youtube.com/@amirilifee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Youtube className="h-5 w-5" />
-                  youtube.com/@amirilifee
-                </a>
-                <a
-                  href="https://linkedin.com/in/amirilifee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Linkedin className="h-5 w-5" />
-                  linkedin.com/in/amirilifee
-                </a>
+                <div className="flex items-center justify-start gap-6">
+                  <a
+                    href="https://github.com/amirymax"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Github className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://instagram.com/amirilifee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Instagram className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://youtube.com/@amirilifee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Youtube className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/amirymax"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Linkedin className="h-6 w-6" />
+                  </a>
+                </div>
               </div>
             </div>
 
