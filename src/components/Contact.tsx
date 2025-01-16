@@ -115,12 +115,12 @@ const Contact = () => {
                 </a>
                 <div className="flex items-center justify-start gap-6">
                   <a
-                    href="https://github.com/amirymax"
+                    href="https://t.me/amirilifee"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    <Github className="h-6 w-6" />
+                    <MessageSquare className="h-6 w-6" />
                   </a>
                   <a
                     href="https://instagram.com/amirilifee"
@@ -145,6 +145,14 @@ const Contact = () => {
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Linkedin className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://github.com/amirymax"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Github className="h-6 w-6" />
                   </a>
                 </div>
               </div>
