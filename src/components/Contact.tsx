@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Github, Mail, MessageSquare } from "lucide-react";
+import { Github, Mail, MessageSquare, Instagram, Youtube, Linkedin } from "lucide-react";
 import { useToast } from "./ui/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { toast } = useToast();
-  const { t } = useLanguage(); // Используем перевод
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -50,7 +50,7 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Форма */}
+          {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -93,7 +93,7 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Контактная информация */}
+          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -123,13 +123,31 @@ const Contact = () => {
                   github.com/amirymax
                 </a>
                 <a
-                  href="https://t.me/amirilifee"
+                  href="https://instagram.com/amirilifee"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  <MessageSquare className="h-5 w-5" />
-                  t.me/amirilifee
+                  <Instagram className="h-5 w-5" />
+                  instagram.com/amirilifee
+                </a>
+                <a
+                  href="https://youtube.com/@amirilifee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Youtube className="h-5 w-5" />
+                  youtube.com/@amirilifee
+                </a>
+                <a
+                  href="https://linkedin.com/in/amirilifee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Linkedin className="h-5 w-5" />
+                  linkedin.com/in/amirilifee
                 </a>
               </div>
             </div>
@@ -143,7 +161,7 @@ const Contact = () => {
               </p>
               <Button variant="secondary" className="w-full" asChild>
                 <a
-                  href="https://t.me/amirilifee"
+                  href="https://t.me/Amiri_Talks"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
