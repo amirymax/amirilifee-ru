@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { InterviewPython } from "@/components/interview/InterviewPython";
+import { InterviewDjango } from "@/components/interview/InterviewDjango";
 import { AlgorithmsFlow } from "@/components/interview/AlgorithmsFlow";
 import Navbar from "@/components/Navbar";
 
@@ -67,6 +68,9 @@ const Interview = () => {
             <Tabs value={activeTab} className="w-full">
               <TabsContent value="python" data-value="python">
                 <InterviewPython />
+              </TabsContent>
+              <TabsContent value="django" data-value="django">
+                <InterviewDjango />
               </TabsContent>
               <TabsContent value="algorithms" data-value="algorithms">
                 <div className="space-y-8">

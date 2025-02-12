@@ -1,79 +1,132 @@
 
-import { RoadmapCard } from "../roadmaps/RoadmapCard";
+import { TopicCard } from "./TopicCard";
 
-export const pythonInterviewContent = [
+const pythonTopics = [
   {
-    title: "1. Основы Python и ООП (2-3 недели)",
-    goal: "Глубокое понимание основных концепций Python и ООП для успешного прохождения технических интервью.",
-    topics: [
-      "Типы данных и их внутренняя реализация",
-      "List comprehensions, генераторы и итераторы",
-      "Декораторы и их применение",
-      "Основные принципы ООП: наследование, инкапсуляция, полиморфизм",
-      "Magic methods в Python",
-      "GIL и многопоточность"
+    title: "1. Arrays & Hashing",
+    problems: [
+      {
+        name: "Contains Duplicate",
+        difficulty: "Easy",
+        url: "https://leetcode.com/problems/contains-duplicate/",
+      },
+      {
+        name: "Valid Anagram",
+        difficulty: "Easy",
+        url: "https://leetcode.com/problems/valid-anagram/",
+      },
+      {
+        name: "Two Sum",
+        difficulty: "Easy",
+        url: "https://leetcode.com/problems/two-sum/",
+      },
+      {
+        name: "Group Anagrams",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/group-anagrams/",
+      },
     ],
-    resources: [
-      "Python Documentation",
-      "Real Python - OOP Articles",
-      "Python Interview Questions on LeetCode"
-    ]
   },
   {
-    title: "2. Структуры данных и алгоритмы (3-4 недели)",
-    goal: "Изучить основные структуры данных и алгоритмы, часто встречающиеся на собеседованиях.",
-    topics: [
-      "Списки, словари, множества и их сложность",
-      "Стеки, очереди, деревья",
-      "Алгоритмы сортировки и поиска",
-      "Работа с графами",
-      "Динамическое программирование"
+    title: "2. Two Pointers",
+    problems: [
+      {
+        name: "Valid Palindrome",
+        difficulty: "Easy",
+        url: "https://leetcode.com/problems/valid-palindrome/",
+      },
+      {
+        name: "3Sum",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/3sum/",
+      },
+      {
+        name: "Container With Most Water",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/container-with-most-water/",
+      },
     ],
-    project: "Решение задач на LeetCode/HackerRank"
   },
   {
-    title: "3. Практика решения задач (2-3 недели)",
-    goal: "Получить практический опыт решения типичных задач с собеседований.",
-    topics: [
-      "Задачи на строки и массивы",
-      "Задачи на деревья и графы",
-      "Задачи на динамическое программирование",
-      "System Design задачи"
+    title: "3. Binary Search",
+    problems: [
+      {
+        name: "Binary Search",
+        difficulty: "Easy",
+        url: "https://leetcode.com/problems/binary-search/",
+      },
+      {
+        name: "Search a 2D Matrix",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/search-a-2d-matrix/",
+      },
+      {
+        name: "Find Minimum in Rotated Sorted Array",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+      },
     ],
-    recommendations: [
-      "Решайте задачи на время (30-45 минут)",
-      "Проговаривайте ход решения вслух",
-      "Практикуйте написание чистого кода"
-    ]
   },
   {
-    title: "4. Подготовка к поведенческим вопросам (1 неделя)",
-    goal: "Подготовиться к нетехническим аспектам интервью.",
-    topics: [
-      "Рассказ о себе и своем опыте",
-      "Описание прошлых проектов",
-      "Работа в команде и конфликтные ситуации",
-      "Вопросы о карьерных целях"
+    title: "4. Stack",
+    problems: [
+      {
+        name: "Valid Parentheses",
+        difficulty: "Easy",
+        url: "https://leetcode.com/problems/valid-parentheses/",
+      },
+      {
+        name: "Min Stack",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/min-stack/",
+      },
+      {
+        name: "Daily Temperatures",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/daily-temperatures/",
+      },
     ],
-    recommendations: [
-      "Подготовьте структурированные ответы по методологии STAR",
-      "Практикуйте ответы с другими разработчиками"
-    ]
   },
   {
-    title: "5. Mock-интервью и финальная подготовка",
-    goal: "Отработать навыки прохождения интервью в реальных условиях.",
-    topics: [
-      "Проведение пробных технических интервью",
-      "Проведение поведенческих интервью",
-      "Работа над обратной связью"
+    title: "5. Binary Tree",
+    problems: [
+      {
+        name: "Invert Binary Tree",
+        difficulty: "Easy",
+        url: "https://leetcode.com/problems/invert-binary-tree/",
+      },
+      {
+        name: "Maximum Depth of Binary Tree",
+        difficulty: "Easy",
+        url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+      },
+      {
+        name: "Binary Tree Level Order Traversal",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+      },
     ],
-    recommendations: [
-      "Найдите партнера для практики интервью",
-      "Записывайте свои ответы на видео",
-      "Проанализируйте типичные ошибки"
-    ]
-  }
+  },
+  {
+    title: "6. Graph",
+    problems: [
+      {
+        name: "Number of Islands",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/number-of-islands/",
+      },
+      {
+        name: "Clone Graph",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        name: "Course Schedule",
+        difficulty: "Medium",
+        url: "https://leetcode.com/problems/course-schedule/",
+      },
+    ],
+  },
 ];
 
 export const InterviewPython = () => {
@@ -81,21 +134,17 @@ export const InterviewPython = () => {
     <div className="space-y-8">
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-4">
-          Подготовка к Python-интервью: от основ до предложения о работе
+          Python Interview Problems
         </h2>
         <p className="text-muted-foreground">
-          Структурированный план подготовки к техническим собеседованиям по Python. 
-          Этот гайд поможет вам систематизировать знания и уверенно пройти любое интервью.
+          Подборка задач с LeetCode для подготовки к техническим собеседованиям по Python. 
+          Задачи упорядочены по темам и уровню сложности.
         </p>
       </div>
 
-      {pythonInterviewContent.map((section, index) => (
-        <RoadmapCard key={index} section={section} />
+      {pythonTopics.map((topic, index) => (
+        <TopicCard key={index} {...topic} />
       ))}
-
-      <p className="text-center text-lg text-muted-foreground mt-8">
-        Помните: успешное прохождение интервью - это результат систематической подготовки и практики! 💪
-      </p>
     </div>
   );
 };
