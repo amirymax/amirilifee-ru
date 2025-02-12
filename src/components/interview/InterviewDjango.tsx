@@ -1,23 +1,24 @@
 
 import { TopicCard } from "./TopicCard";
+import { TopicSection } from "./types";
 
-const djangoTopics = [
+const djangoTopics: TopicSection[] = [
   {
     title: "1. ORM и Базы данных",
     problems: [
       {
         name: "Оптимизация запросов: N+1 проблема",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/department-top-three-salaries/",
       },
       {
         name: "Сложные агрегации",
-        difficulty: "Hard",
+        difficulty: "Hard" as const,
         url: "https://leetcode.com/problems/trips-and-users/",
       },
       {
         name: "Работа с несколькими моделями",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/department-highest-salary/",
       },
     ],
@@ -27,17 +28,17 @@ const djangoTopics = [
     problems: [
       {
         name: "Проектирование API эндпоинтов",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/design-twitter/",
       },
       {
         name: "Пагинация и фильтрация",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/design-hashmap/",
       },
       {
         name: "Аутентификация и авторизация",
-        difficulty: "Hard",
+        difficulty: "Hard" as const,
         url: "https://leetcode.com/problems/design-authentication-manager/",
       },
     ],
@@ -47,12 +48,12 @@ const djangoTopics = [
     problems: [
       {
         name: "Реализация LRU кеша",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/lru-cache/",
       },
       {
         name: "Распределенное кеширование",
-        difficulty: "Hard",
+        difficulty: "Hard" as const,
         url: "https://leetcode.com/problems/design-in-memory-file-system/",
       },
     ],

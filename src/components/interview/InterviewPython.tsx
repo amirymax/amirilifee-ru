@@ -1,28 +1,29 @@
 
 import { TopicCard } from "./TopicCard";
+import { TopicSection } from "./types";
 
-const pythonTopics = [
+const pythonTopics: TopicSection[] = [
   {
     title: "1. Arrays & Hashing",
     problems: [
       {
         name: "Contains Duplicate",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/contains-duplicate/",
       },
       {
         name: "Valid Anagram",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/valid-anagram/",
       },
       {
         name: "Two Sum",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/two-sum/",
       },
       {
         name: "Group Anagrams",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/group-anagrams/",
       },
     ],
@@ -32,17 +33,17 @@ const pythonTopics = [
     problems: [
       {
         name: "Valid Palindrome",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/valid-palindrome/",
       },
       {
         name: "3Sum",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/3sum/",
       },
       {
         name: "Container With Most Water",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/container-with-most-water/",
       },
     ],
@@ -52,17 +53,17 @@ const pythonTopics = [
     problems: [
       {
         name: "Binary Search",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/binary-search/",
       },
       {
         name: "Search a 2D Matrix",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/search-a-2d-matrix/",
       },
       {
         name: "Find Minimum in Rotated Sorted Array",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
       },
     ],
@@ -72,17 +73,17 @@ const pythonTopics = [
     problems: [
       {
         name: "Valid Parentheses",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/valid-parentheses/",
       },
       {
         name: "Min Stack",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/min-stack/",
       },
       {
         name: "Daily Temperatures",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/daily-temperatures/",
       },
     ],
@@ -92,17 +93,17 @@ const pythonTopics = [
     problems: [
       {
         name: "Invert Binary Tree",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/invert-binary-tree/",
       },
       {
         name: "Maximum Depth of Binary Tree",
-        difficulty: "Easy",
+        difficulty: "Easy" as const,
         url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
       },
       {
         name: "Binary Tree Level Order Traversal",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/binary-tree-level-order-traversal/",
       },
     ],
@@ -112,17 +113,17 @@ const pythonTopics = [
     problems: [
       {
         name: "Number of Islands",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/number-of-islands/",
       },
       {
         name: "Clone Graph",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/clone-graph/",
       },
       {
         name: "Course Schedule",
-        difficulty: "Medium",
+        difficulty: "Medium" as const,
         url: "https://leetcode.com/problems/course-schedule/",
       },
     ],
