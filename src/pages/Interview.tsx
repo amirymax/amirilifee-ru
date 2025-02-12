@@ -10,15 +10,25 @@ import { InterviewDjango } from "@/components/interview/InterviewDjango";
 import { AlgorithmsFlow } from "@/components/interview/AlgorithmsFlow";
 import Navbar from "@/components/Navbar";
 
-const Interview = () => {
-  const [activeTab, setActiveTab] = useState("python");
-  const navigate = useNavigate();
+const interviewTopics = [
+  { name: "Arrays & Hashing", value: "arrays" },
+  { name: "Two Pointers", value: "two-pointers" },
+  { name: "Binary Search", value: "binary-search" },
+  { name: "Stack", value: "stack" },
+  { name: "Binary Tree", value: "binary-tree" },
+  { name: "Graph", value: "graph" },
+  { name: "Dynamic Programming", value: "dp" },
+  { name: "Sliding Window", value: "sliding-window" },
+  { name: "Backtracking", value: "backtracking" },
+  { name: "Heap", value: "heap" },
+  { name: "Greedy", value: "greedy" },
+  { name: "Intervals", value: "intervals" },
+  { name: "Math & Geometry", value: "math" },
+];
 
-  const interviewTabs = [
-    { name: "Python", value: "python" },
-    { name: "Django", value: "django" },
-    { name: "Алгоритмы", value: "algorithms" },
-  ];
+const Interview = () => {
+  const [activeTab, setActiveTab] = useState(interviewTopics[0].value);
+  const navigate = useNavigate();
 
   const handleContactClick = () => {
     navigate('/#contact');
@@ -30,14 +40,14 @@ const Interview = () => {
 
   const SideMenu = () => (
     <div className="flex flex-col gap-2">
-      {interviewTabs.map((tab) => (
+      {interviewTopics.map((topic) => (
         <Button
-          key={tab.value}
-          variant={activeTab === tab.value ? "secondary" : "ghost"}
-          className="w-full justify-start"
-          onClick={() => setActiveTab(tab.value)}
+          key={topic.value}
+          variant={activeTab === topic.value ? "secondary" : "ghost"}
+          className="w-full justify-start text-left"
+          onClick={() => setActiveTab(topic.value)}
         >
-          {tab.name}
+          {topic.name}
         </Button>
       ))}
       
@@ -66,25 +76,21 @@ const Interview = () => {
 
           <main className="flex-1 lg:pl-8">
             <Tabs value={activeTab} className="w-full">
-              <TabsContent value="python" data-value="python">
-                <InterviewPython />
-              </TabsContent>
-              <TabsContent value="django" data-value="django">
-                <InterviewDjango />
-              </TabsContent>
-              <TabsContent value="algorithms" data-value="algorithms">
-                <div className="space-y-8">
-                  <div className="mb-8">
-                    <h2 className="text-3xl font-bold mb-4">
-                      Алгоритмы и структуры данных
-                    </h2>
-                    <p className="text-muted-foreground">
-                      Интерактивная карта изучения алгоритмов и структур данных для подготовки к техническим собеседованиям.
-                    </p>
+              {interviewTopics.map((topic) => (
+                <TabsContent key={topic.value} value={topic.value}>
+                  <div className="space-y-8">
+                    <div className="mb-8">
+                      <h2 className="text-3xl font-bold mb-4">
+                        {topic.name}
+                      </h2>
+                      <p className="text-muted-foreground">
+                        Задачи для подготовки по теме {topic.name.toLowerCase()}
+                      </p>
+                    </div>
+                    <InterviewPython />
                   </div>
-                  <AlgorithmsFlow />
-                </div>
-              </TabsContent>
+                </TabsContent>
+              ))}
             </Tabs>
           </main>
         </div>
