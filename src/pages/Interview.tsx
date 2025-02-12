@@ -5,9 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { InterviewPython } from "@/components/interview/InterviewPython";
-import { InterviewDjango } from "@/components/interview/InterviewDjango";
-import { AlgorithmsFlow } from "@/components/interview/AlgorithmsFlow";
 import Navbar from "@/components/Navbar";
 
 const interviewTopics = [
@@ -27,7 +24,6 @@ const interviewTopics = [
 ];
 
 const Interview = () => {
-  const [activeTab, setActiveTab] = useState(interviewTopics[0].value);
   const navigate = useNavigate();
 
   const handleContactClick = () => {
@@ -43,9 +39,9 @@ const Interview = () => {
       {interviewTopics.map((topic) => (
         <Button
           key={topic.value}
-          variant={activeTab === topic.value ? "secondary" : "ghost"}
+          variant="ghost"
           className="w-full justify-start text-left"
-          onClick={() => setActiveTab(topic.value)}
+          onClick={() => navigate(`/interview/${topic.value}`)}
         >
           {topic.name}
         </Button>
@@ -69,30 +65,30 @@ const Interview = () => {
       <Navbar />
       
       <div className="min-h-screen pt-20 section-padding">
-        <div className="container mx-auto flex flex-col lg:flex-row">
-          <aside className="hidden lg:block w-64 sticky top-24 h-fit">
-            <SideMenu />
-          </aside>
+        <div className="container mx-auto">
+          <div className="space-y-8">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold mb-4">
+                Interview Preparation
+              </h2>
+              <p className="text-muted-foreground">
+                Choose a topic to practice problems and prepare for technical interviews
+              </p>
+            </div>
 
-          <main className="flex-1 lg:pl-8">
-            <Tabs value={activeTab} className="w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {interviewTopics.map((topic) => (
-                <TabsContent key={topic.value} value={topic.value}>
-                  <div className="space-y-8">
-                    <div className="mb-8">
-                      <h2 className="text-3xl font-bold mb-4">
-                        {topic.name}
-                      </h2>
-                      <p className="text-muted-foreground">
-                        Задачи для подготовки по теме {topic.name.toLowerCase()}
-                      </p>
-                    </div>
-                    <InterviewPython />
-                  </div>
-                </TabsContent>
+                <Button
+                  key={topic.value}
+                  variant="outline"
+                  className="h-24 text-lg justify-center"
+                  onClick={() => navigate(`/interview/${topic.value}`)}
+                >
+                  {topic.name}
+                </Button>
               ))}
-            </Tabs>
-          </main>
+            </div>
+          </div>
         </div>
       </div>
     </div>

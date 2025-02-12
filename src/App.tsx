@@ -8,6 +8,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import Roadmaps from "./pages/Roadmaps";
 import Interview from "./pages/Interview";
+import TopicPage from "./pages/TopicPage";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/roadmaps" element={<Roadmaps />} />
             <Route path="/interview" element={<Interview />} />
+            <Route path="/interview/:topic" element={<TopicPage />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
