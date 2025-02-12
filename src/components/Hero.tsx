@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowRight, BookOpen } from "lucide-react";
@@ -63,8 +64,8 @@ const Hero = () => {
             className="mt-4"
           >
             <Button variant="outline" size="lg" asChild>
-              <Link to="/roadmaps" className="group">
-                Roadmaps
+              <Link to="/interview" className="group">
+                Подготовка к интервью
                 <BookOpen className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
