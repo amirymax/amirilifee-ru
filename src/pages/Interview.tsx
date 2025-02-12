@@ -1,24 +1,17 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
-import { Link, useNavigate } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 import { InterviewPython } from "@/components/interview/InterviewPython";
+import { AlgorithmsFlow } from "@/components/interview/AlgorithmsFlow";
+import Navbar from "@/components/Navbar";
 
 const Interview = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("python");
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const interviewTabs = [
     { name: "Python", value: "python" },
@@ -62,28 +55,8 @@ const Interview = () => {
 
   return (
     <div>
-      <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? "glass py-4" : "py-6"
-        }`}
-      >
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold text-gradient">
-            Amiri | Главное
-          </Link>
-          <Sheet>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-[240px] sm:w-[280px]">
-              <SideMenu />
-            </SheetContent>
-          </Sheet>
-        </div>
-      </nav>
-
+      <Navbar />
+      
       <div className="min-h-screen pt-20 section-padding">
         <div className="container mx-auto flex flex-col lg:flex-row">
           <aside className="hidden lg:block w-64 sticky top-24 h-fit">
@@ -95,7 +68,19 @@ const Interview = () => {
               <TabsContent value="python" data-value="python">
                 <InterviewPython />
               </TabsContent>
-              {/* Остальные табы будут добавлены позже */}
+              <TabsContent value="algorithms" data-value="algorithms">
+                <div className="space-y-8">
+                  <div className="mb-8">
+                    <h2 className="text-3xl font-bold mb-4">
+                      Алгоритмы и структуры данных
+                    </h2>
+                    <p className="text-muted-foreground">
+                      Интерактивная карта изучения алгоритмов и структур данных для подготовки к техническим собеседованиям.
+                    </p>
+                  </div>
+                  <AlgorithmsFlow />
+                </div>
+              </TabsContent>
             </Tabs>
           </main>
         </div>
