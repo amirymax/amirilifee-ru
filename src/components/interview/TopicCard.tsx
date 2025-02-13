@@ -1,12 +1,14 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Youtube, Github } from "lucide-react";
 
 interface LeetCodeProblem {
   name: string;
   difficulty: "Easy" | "Medium" | "Hard";
   url: string;
+  youtubeUrl?: string;
+  githubUrl?: string;
 }
 
 interface TopicCardProps {
@@ -41,14 +43,39 @@ export const TopicCard = ({ title, problems }: TopicCardProps) => {
                 >
                   {problem.difficulty}
                 </Badge>
-                <a
-                  href={problem.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </a>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={problem.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                    title="LeetCode"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                  {problem.youtubeUrl && (
+                    <a
+                      href={problem.youtubeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-red-500 transition-colors"
+                      title="Video Solution"
+                    >
+                      <Youtube className="h-4 w-4" />
+                    </a>
+                  )}
+                  {problem.githubUrl && (
+                    <a
+                      href={problem.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+                      title="Solution Code"
+                    >
+                      <Github className="h-4 w-4" />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}

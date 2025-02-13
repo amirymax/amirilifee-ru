@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -15,16 +14,22 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Contains Duplicate",
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/contains-duplicate/",
+          youtubeUrl: "https://www.youtube.com/watch?v=3OamzN90kPg",
+          githubUrl: "https://github.com/example/contains-duplicate",
         },
         {
           name: "Valid Anagram",
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/valid-anagram/",
+          youtubeUrl: "https://www.youtube.com/watch?v=9UtInBqnCgA",
+          githubUrl: "https://github.com/example/valid-anagram",
         },
         {
           name: "Two Sum",
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/two-sum/",
+          youtubeUrl: "https://www.youtube.com/watch?v=KLlXCFG5TnA",
+          githubUrl: "https://github.com/example/two-sum",
         },
       ],
     },
@@ -37,11 +42,15 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Valid Palindrome",
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/valid-palindrome/",
+          youtubeUrl: "https://www.youtube.com/watch?v=jJXJ16kPFWg",
+          githubUrl: "https://github.com/example/valid-palindrome",
         },
         {
           name: "3Sum",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/3sum/",
+          youtubeUrl: "https://www.youtube.com/watch?v=jzZsG8n2R9A",
+          githubUrl: "https://github.com/example/3sum",
         },
       ],
     },
