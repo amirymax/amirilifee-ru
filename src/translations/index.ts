@@ -6,7 +6,7 @@ export const translations = {
       projects: "Projects",
       about: "About",
       roadmaps: "Roadmaps",
-      contacts: "Contacts",
+      interview: "Algo Prep",
       getInTouch: "Get in Touch"
     },
     hero: {
@@ -14,7 +14,7 @@ export const translations = {
       title: "Professional Developer",
       description: "I create elegant solutions through code, specializing in web development, Telegram bots, and programming education.",
       myWorks: "My Works",
-      contact: "Contact"
+      interview: "Algo Prep",
     },
     services: {
       title: "My Services",
@@ -100,7 +100,7 @@ export const translations = {
       projects: "Проекты",
       about: "Обо мне",
       roadmaps: "Roadmaps",
-      contacts: "Контакты",
+      interview: "Подтяни Алгосы",
       getInTouch: "Связаться"
     },
     hero: {
@@ -108,7 +108,7 @@ export const translations = {
       title: "Профессиональный Разработчик",
       description: "Я создаю элегантные решения с помощью кода, специализируюсь на веб-разработке, Telegram ботах и обучении программированию.",
       myWorks: "Мои Работы",
-      contact: "Связаться"
+      interview: "Подтяни Алгосы",
     },
     services: {
       title: "Мои Услуги",
