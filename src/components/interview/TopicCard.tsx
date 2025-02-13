@@ -36,14 +36,14 @@ export const TopicCard = ({ title, problems }: TopicCardProps) => {
               className="flex items-center justify-between p-2 hover:bg-muted/50 rounded-lg transition-colors"
             >
               <span className="flex-1">{problem.name}</span>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-6">
                 <Badge
                   variant="secondary"
                   className={difficultyColors[problem.difficulty]}
                 >
                   {problem.difficulty}
                 </Badge>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-4">
                   <a
                     href={problem.url}
                     target="_blank"
@@ -51,7 +51,7 @@ export const TopicCard = ({ title, problems }: TopicCardProps) => {
                     className="hover:text-primary transition-colors"
                     title="LeetCode"
                   >
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-5 w-5" />
                   </a>
                   {problem.youtubeUrl && (
                     <a
@@ -61,7 +61,7 @@ export const TopicCard = ({ title, problems }: TopicCardProps) => {
                       className="hover:text-red-500 transition-colors"
                       title="Video Solution"
                     >
-                      <Youtube className="h-4 w-4" />
+                      <Youtube className="h-5 w-5" />
                     </a>
                   )}
                   {problem.githubUrl && (
@@ -72,7 +72,7 @@ export const TopicCard = ({ title, problems }: TopicCardProps) => {
                       className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                       title="Solution Code"
                     >
-                      <Github className="h-4 w-4" />
+                      <Github className="h-5 w-5" />
                     </a>
                   )}
                 </div>
