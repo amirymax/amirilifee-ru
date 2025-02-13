@@ -26,7 +26,6 @@ const Navbar = () => {
     { label: t('nav.about'), href: "#about" },
     { label: t('nav.roadmaps'), href: "/roadmaps" },
     { label: "Подготовка к интервью", href: "/interview" },
-    { label: t('nav.contacts'), href: "#contact" },
   ];
 
   return (
