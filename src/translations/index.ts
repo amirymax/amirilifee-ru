@@ -101,7 +101,7 @@ export const translations = {
       backToTopics: "Back to Topics",
       practiceProblems: "Practice problems for"
     }
-    }
+    
   },
   ru: {
     nav: {
@@ -206,5 +206,4 @@ export const translations = {
       practiceProblems: "Практические задачи по теме"
     }
     }
-  }
 };
