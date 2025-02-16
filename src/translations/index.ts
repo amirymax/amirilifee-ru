@@ -6,15 +6,17 @@ export const translations = {
       projects: "Projects",
       about: "About",
       roadmaps: "Roadmaps",
-      interview: "Interview Preparation",
-      getInTouch: "Get in Touch"
+      contacts: "Contacts",
+      getInTouch: "Get in Touch",
+      interview: "Algo Prep",
     },
     hero: {
       greeting: "Hi, I'm",
       title: "Professional Developer",
       description: "I create elegant solutions through code, specializing in web development, Telegram bots, and programming education.",
       myWorks: "My Works",
-      interview: "Interview Preparation",
+      contact: "Contact",
+      interview: "Algo Prep",
     },
     services: {
       title: "My Services",
@@ -81,7 +83,9 @@ export const translations = {
         name: "Your Name",
         email: "Your Email",
         message: "Your Message",
-        send: "Send Message"
+        send: "Send Message",
+        sendSuccess: "Message sent!",
+        sendMessage: "Thank you for reaching out. I'll get back to you soon."
       },
       info: {
         title: "Contact Information",
@@ -90,13 +94,13 @@ export const translations = {
           description: "Need a quick response? Contact me via Telegram for prompt communication.",
           button: "Message on Telegram"
         }
-      }
-    },
-    interview: {
+      },
+      interview: {
       title: "Interview Preparation",
       description: "Choose a topic to practice problems and prepare for technical interviews",
       backToTopics: "Back to Topics",
       practiceProblems: "Practice problems for"
+    }
     }
   },
   ru: {
@@ -106,15 +110,17 @@ export const translations = {
       projects: "Проекты",
       about: "Обо мне",
       roadmaps: "Roadmaps",
-      interview: "Подготовка к Интервью",
-      getInTouch: "Связаться"
+      contacts: "Контакты",
+      getInTouch: "Связаться",
+      interview: "Подтяни Алгосы",
     },
     hero: {
       greeting: "Привет, я",
       title: "Профессиональный Разработчик",
       description: "Я создаю элегантные решения с помощью кода, специализируюсь на веб-разработке, Telegram ботах и обучении программированию.",
       myWorks: "Мои Работы",
-      interview: "Подготовка к Интервью",
+      contact: "Связаться",
+      interview: "Подтяни Алгосы",
     },
     services: {
       title: "Мои Услуги",
@@ -181,7 +187,9 @@ export const translations = {
         name: "Ваше Имя",
         email: "Ваш Email",
         message: "Ваше Сообщение",
-        send: "Отправить Сообщение"
+        send: "Отправить Сообщение",
+        sendSuccess: "Сообщение отправлено!",
+        sendMessage: "Спасибо за обращение. Я свяжусь с вами в ближайшее время."
       },
       info: {
         title: "Контактная Информация",
@@ -190,13 +198,13 @@ export const translations = {
           description: "Нужен быстрый ответ? Свяжитесь со мной через Telegram для оперативного общения.",
           button: "Написать в Telegram"
         }
-      }
-    },
-    interview: {
+      },
+      interview: {
       title: "Подготовка к Интервью",
       description: "Выберите тему для практики задач и подготовки к техническим интервью",
       backToTopics: "Назад к Темам",
       practiceProblems: "Практические задачи по теме"
+    }
     }
   }
 };
