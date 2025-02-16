@@ -6,7 +6,7 @@ export const translations = {
       projects: "Projects",
       about: "About",
       roadmaps: "Roadmaps",
-      interview: "Algo Prep",
+      interview: "Interview Preparation",
       getInTouch: "Get in Touch"
     },
     hero: {
@@ -14,7 +14,7 @@ export const translations = {
       title: "Professional Developer",
       description: "I create elegant solutions through code, specializing in web development, Telegram bots, and programming education.",
       myWorks: "My Works",
-      interview: "Algo Prep",
+      interview: "Interview Preparation",
     },
     services: {
       title: "My Services",
@@ -91,6 +91,10 @@ export const translations = {
           button: "Message on Telegram"
         }
       }
+    },
+    interview: {
+      title: "Interview Preparation",
+      description: "Choose a topic to practice problems and prepare for technical interviews"
     }
   },
   ru: {
@@ -100,7 +104,7 @@ export const translations = {
       projects: "Проекты",
       about: "Обо мне",
       roadmaps: "Roadmaps",
-      interview: "Подтяни Алгосы",
+      interview: "Подготовка к Интервью",
       getInTouch: "Связаться"
     },
     hero: {
@@ -108,7 +112,7 @@ export const translations = {
       title: "Профессиональный Разработчик",
       description: "Я создаю элегантные решения с помощью кода, специализируюсь на веб-разработке, Telegram ботах и обучении программированию.",
       myWorks: "Мои Работы",
-      interview: "Подтяни Алгосы",
+      interview: "Подготовка к Интервью",
     },
     services: {
       title: "Мои Услуги",
@@ -185,6 +189,10 @@ export const translations = {
           button: "Написать в Telegram"
         }
       }
+    },
+    interview: {
+      title: "Подготовка к Интервью",
+      description: "Выберите тему для практики задач и подготовки к техническим интервью"
     }
   }
 };
