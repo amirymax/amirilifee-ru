@@ -94,7 +94,9 @@ export const translations = {
     },
     interview: {
       title: "Interview Preparation",
-      description: "Choose a topic to practice problems and prepare for technical interviews"
+      description: "Choose a topic to practice problems and prepare for technical interviews",
+      backToTopics: "Back to Topics",
+      practiceProblems: "Practice problems for"
     }
   },
   ru: {
@@ -192,7 +194,9 @@ export const translations = {
     },
     interview: {
       title: "Подготовка к Интервью",
-      description: "Выберите тему для практики задач и подготовки к техническим интервью"
+      description: "Выберите тему для практики задач и подготовки к техническим интервью",
+      backToTopics: "Назад к Темам",
+      practiceProblems: "Практические задачи по теме"
     }
   }
 };
