@@ -1,4 +1,3 @@
-
 export const translations = {
   en: {
     nav: {
@@ -83,6 +82,7 @@ export const translations = {
       form: {
         name: "Your Name",
         email: "Your Email",
+        telegram: "Your Telegram Username",
         message: "Your Message",
         send: "Send Message",
         sendSuccess: "Message sent!",
@@ -187,6 +187,7 @@ export const translations = {
       form: {
         name: "Ваше Имя",
         email: "Ваш Email",
+        telegram: "Ваш Ник в Telegram",
         message: "Ваше Сообщение",
         send: "Отправить Сообщение",
         sendSuccess: "Сообщение отправлено!",

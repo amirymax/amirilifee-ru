@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
@@ -13,6 +14,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    telegram: "",
     message: "",
   });
 
@@ -22,7 +24,7 @@ const Contact = () => {
       title: t("contact.form.sendSuccess"),
       description: t("contact.form.sendMessage"),
     });
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", telegram: "", message: "" });
   };
 
   const handleChange = (
@@ -75,6 +77,14 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                />
+              </div>
+              <div>
+                <Input
+                  placeholder={t("contact.form.telegram")}
+                  name="telegram"
+                  value={formData.telegram}
+                  onChange={handleChange}
                 />
               </div>
               <div>
