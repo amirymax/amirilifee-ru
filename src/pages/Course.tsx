@@ -110,6 +110,39 @@ const Course = () => {
     }
   ];
 
+  const courseProgram = [
+    {
+      title: "Асосҳои Python",
+      items: [
+        "Синтаксис ва ноилҳои асосӣ",
+        "Рушдҳо ва структураҳои додаҳо",
+        "Функсияҳо ва модулҳо",
+        "Кор бо файлҳо",
+        "Хатогиҳо ва истисноҳо"
+      ]
+    },
+    {
+      title: "Telegram Bot API",
+      items: [
+        "Танзими муҳити кор",
+        "BotFather ва токени бот",
+        "Дастуротҳои асосӣ",
+        "Keyboard ва InlineKeyboard",
+        "Кор бо медиа ва файлҳо"
+      ]
+    },
+    {
+      title: "Лоиҳаҳои амалӣ",
+      items: [
+        "Боти хабарномагон",
+        "Боти савол-ҷавоб",
+        "Боти муодилаҳо",
+        "Бот барои маълумотҳо",
+        "Деплой ва хостинг"
+      ]
+    }
+  ];
+
   return (
     <div id="top" className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
       {/* Header Section */}
@@ -142,6 +175,45 @@ const Course = () => {
               </Badge>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Course Program Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
+          >
+            Барномаи курс
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {courseProgram.map((module, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="glass rounded-lg p-6"
+              >
+                <h3 className="text-xl font-bold text-white mb-6 text-center">
+                  {module.title}
+                </h3>
+                <ul className="space-y-3">
+                  {module.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
