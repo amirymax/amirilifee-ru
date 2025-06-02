@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -112,9 +111,9 @@ const Course = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
+    <div id="top" className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
       {/* Header Section */}
-      <section className="relative overflow-hidden py-20 px-4">
+      <section className="relative overflow-hidden py-32 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="container mx-auto text-center relative z-10">
           <motion.div
