@@ -55,10 +55,9 @@ const Academy = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
-              <span className="text-gradient bg-gradient-to-r from-blue-400 via-purple-400 to-yellow-400">
-                AMIRI Academy
-              </span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
+              <span className="text-yellow-400">&gt;_ AMIRI</span>{" "}
+              <span className="text-blue-400">Academy</span>
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-6 font-medium">
               Ҳаёти нав бо Барномасозӣ!
@@ -112,13 +111,26 @@ const Academy = () => {
             {courses.map((course, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 50, rotateY: -15 }}
+                whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+                whileHover={{ 
+                  y: -10, 
+                  rotateY: 5, 
+                  rotateX: 5,
+                  scale: 1.02,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.2,
+                  type: "spring",
+                  stiffness: 100
+                }}
                 viewport={{ once: true }}
-                className="group"
+                className="group perspective-1000"
+                style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="h-full glass border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
+                <Card className="h-full glass border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden relative backdrop-blur-xl bg-gradient-to-br from-background/80 to-background/40 hover:from-background/90 hover:to-background/60">
                   <div className="relative overflow-hidden">
                     <img
                       src={course.image}
