@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Smartphone, Wifi, Clock, Heart, Check } from "lucide-react";
+import { ExternalLink, Smartphone, Wifi, Clock, Heart } from "lucide-react";
 
 const Academy = () => {
   const [selectedCourse, setSelectedCourse] = useState<null | typeof courses[0]>(null);
@@ -14,63 +14,24 @@ const Academy = () => {
   const courses = [
     {
       title: "Python аз 0 + Telegram-бот",
+      image: "/lovable-uploads/bbb02758-f381-4d59-8a17-6d073e8d98e9.png",
       price: "399 TJS",
-      features: [
-        "Асосҳои Python: синтаксис, типҳо, структураҳои додаҳо",
-        "Усулҳои кор бо ададҳо, сатрҳо, рӯйхат ва луғат",
-        "Функсияҳо, модулҳо, файлҳо (JSON), OOP, истисноҳо",
-        "Telegram Bot API бо aiogram: ботсозӣ, командаҳо, клавиатураҳо",
-        "Дастрасии абадӣ (1 пардохт)",
-        "Дарсҳои видеоӣ + маводи амалӣ",
-        "Ментори шахсӣ, гурӯҳи саволу ҷавоб",
-        "Тестҳо, машқҳо, зангҳои гурӯҳӣ ва маслиҳатҳо"
-      ],
-      requirements: [
-        "Ноутбук ё телефон",
-        "Интернет",
-        "Вақти озод",
-        "Хоҳиш ва омодагӣ ба омӯзиш"
-      ]
+      description: "Асосҳои Python: синтаксис, структураҳо, OOP, кор бо файлҳо. Telegram Bot API: aiogram, командаҳо, клавиатураҳо ва кор бо медиа. Дастрасии абадӣ, видеодарсҳо, супоришҳо, ментори шахсӣ ва гурӯҳ барои саволу ҷавоб.",
+      requirements: "Ноутбук ё телефон, интернет, вақт, хоҳиши омӯзиш"
     },
     {
-      title: "Алгоритмҳо ва Таёрӣ ба Интервюи BigTech",
+      title: "Вебсайт бо Истифодаи AI",
+      image: "/lovable-uploads/9466b3fd-b2f6-4a52-8a7a-2b5960b320fb.png",
       price: "399 TJS",
-      features: [
-        "Алгоритмҳои асосӣ: ҷустуҷӯ, сортировка, рекурсия, DP",
-        "Структураҳои додаҳо: рӯйхат, стек, черӣ, дарахт, графҳо",
-        "Омодагӣ ба саволҳои техникӣ ва real-case analysis",
-        "Стратегияҳои ҳалли масъала ва фикркунии алгоритмӣ",
-        "Машқҳои LeetCode-style",
-        "Зангҳои таҷрибавӣ ва mock interviews",
-        "Менторинг ва баррасии кодҳо",
-        "Мавод барои такрор ва тестҳои худсанҷишӣ"
-      ],
-      requirements: [
-        "Дониши ибтидоӣ аз Python ё C++",
-        "Ноутбук ё компютер",
-        "Интернет",
-        "Вақти кофӣ ва хоҳиши ҷиддӣ"
-      ]
+      description: "Таҳияи веб бо AI (Tilda, Framer, ChatGPT, Midjourney). Генерацияи контент, UX/UI, API, чатботҳо ва автоматизатсия. Дарсҳои видеоӣ, амалия, дастгирӣ ва сохтани сайти шахсӣ ё MVP.",
+      requirements: "Ноутбук, интернет, вақт, хоҳиши эҷод"
     },
     {
-      title: "Вебсайт бо Истифодаи AI (No-Code + Low-Code)",
+      title: "Алгоритмҳо ва BigTech",
+      image: "/lovable-uploads/025a29d9-7daa-4ed7-bd69-bcceb903f302.png",
       price: "399 TJS",
-      features: [
-        "Тарҳрезии вебсайт бо асбобҳои AI (Lovable Dev, Cursor, Bolt New, ChatGPT)",
-        "Генерацияи контент бо ChatGPT, Midjourney, Copy.ai ва дигарон",
-        "Дизайн ва UX/UI: шаблонҳо, мобилӣ-адаптивӣ, фидбек",
-        "Интегратсия бо API, ботҳо, формҳо, автоматизатсия",
-        "Созиши 3+ сайт бо дасти худ",
-        "Маводи иловагӣ ва AI-платформаҳо",
-        "Супоришҳои амалӣ ва баррасии гурӯҳӣ",
-        "Дастгирӣ дар сохтани сайти худ ё MVP"
-      ],
-      requirements: [
-        "Ноутбук",
-        "Интернет",
-        "Вақти озод",
-        "Хоҳиши эҷод ва омӯзиш"
-      ]
+      description: "Алгоритмҳои асосӣ, структураҳои додаҳо, LeetCode-style машқҳо ва тайёрӣ ба собесаи техникӣ барои ширкатҳои BigTech. Mock-интервюҳо, менторинг ва супоришҳои амалӣ.",
+      requirements: "Дониши Python ё C++, ноутбук, интернет, вақти ҷиддӣ"
     }
   ];
 
@@ -150,60 +111,58 @@ const Academy = () => {
             {courses.map((course, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, rotateY: -15 }}
+                whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+                whileHover={{ 
+                  y: -10, 
+                  rotateY: 5, 
+                  rotateX: 5,
+                  scale: 1.02,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
                 transition={{ 
-                  duration: 0.6, 
-                  delay: index * 0.1
+                  duration: 0.8, 
+                  delay: index * 0.2,
+                  type: "spring",
+                  stiffness: 100
                 }}
                 viewport={{ once: true }}
-                className="group"
+                className="group perspective-1000"
+                style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="h-full bg-white text-gray-900 border-none rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden relative"
-                      style={{ 
-                        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1), 0 0 20px rgba(139, 92, 246, 0.15)",
-                        filter: "drop-shadow(0 0 10px rgba(139, 92, 246, 0.1))"
-                      }}>
-                  
-                  {/* POPULAR Badge */}
-                  {index === 0 && (
-                    <div className="absolute top-4 left-4 z-10">
-                      <Badge className="bg-purple-600 text-white font-bold px-3 py-1 rounded-full">
-                        POPULAR
+                <Card className="h-full glass border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden relative backdrop-blur-xl bg-gradient-to-br from-background/80 to-background/40 hover:from-background/90 hover:to-background/60">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <Badge className="bg-gradient-to-r from-blue-500 to-yellow-400 text-white font-bold">
+                        {course.price}
                       </Badge>
                     </div>
-                  )}
+                  </div>
 
-                  <CardContent className="p-6 flex flex-col h-full">
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl mb-2">
                       {course.title}
-                    </h3>
+                    </CardTitle>
+                  </CardHeader>
 
-                    {/* Price Section */}
-                    <div className="mb-2">
-                      <div className="flex items-baseline gap-2 mb-1">
-                        <span className="text-3xl font-bold text-gray-900">{course.price}</span>
-                      </div>
-                      <p className="text-sm text-gray-600 font-medium">дастрасии абадӣ</p>
+                  <CardContent className="flex-1 flex flex-col">
+                    <CardDescription className="text-gray-300 text-sm leading-relaxed mb-4 flex-1">
+                      {course.description}
+                    </CardDescription>
+
+                    <div className="mb-4">
+                      <p className="text-xs text-gray-400 font-medium mb-2">Талабот:</p>
+                      <p className="text-xs text-gray-300">{course.requirements}</p>
                     </div>
 
-                    {/* Features with checkmarks */}
-                    <div className="flex-1 mb-6">
-                      <ul className="space-y-2">
-                        {course.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start gap-2">
-                            <Check className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-gray-700 leading-relaxed">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Purchase Button */}
                     <Button
                       onClick={() => handlePurchaseClick(course)}
-                      className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-none"
+                      className="w-full bg-gradient-to-r from-blue-600 to-yellow-500 hover:from-blue-700 hover:to-yellow-600 text-white font-bold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                     >
                       Харидан
                     </Button>
