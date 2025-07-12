@@ -14,21 +14,21 @@ const Academy = () => {
   const courses = [
     {
       title: "Python аз 0 + Telegram-бот",
-      image: "/lovable-uploads/5b5f502d-c863-455e-9af7-5509228f8467.png",
+      image: "/lovable-uploads/bbb02758-f381-4d59-8a17-6d073e8d98e9.png",
       price: "399 TJS",
       description: "Асосҳои Python: синтаксис, структураҳо, OOP, кор бо файлҳо. Telegram Bot API: aiogram, командаҳо, клавиатураҳо ва кор бо медиа. Дастрасии абадӣ, видеодарсҳо, супоришҳо, ментори шахсӣ ва гурӯҳ барои саволу ҷавоб.",
       requirements: "Ноутбук ё телефон, интернет, вақт, хоҳиши омӯзиш"
     },
     {
       title: "Вебсайт бо Истифодаи AI",
-      image: "/lovable-uploads/8a1f1f68-8130-48a1-aa21-d6c5a666370f.png",
+      image: "/lovable-uploads/9466b3fd-b2f6-4a52-8a7a-2b5960b320fb.png",
       price: "399 TJS",
       description: "Таҳияи веб бо AI (Tilda, Framer, ChatGPT, Midjourney). Генерацияи контент, UX/UI, API, чатботҳо ва автоматизатсия. Дарсҳои видеоӣ, амалия, дастгирӣ ва сохтани сайти шахсӣ ё MVP.",
       requirements: "Ноутбук, интернет, вақт, хоҳиши эҷод"
     },
     {
       title: "Алгоритмҳо ва BigTech",
-      image: "/lovable-uploads/ee3bc3e8-8b4b-4f1e-8be7-80ac7068f36d.png",
+      image: "/lovable-uploads/025a29d9-7daa-4ed7-bd69-bcceb903f302.png",
       price: "399 TJS",
       description: "Алгоритмҳои асосӣ, структураҳои додаҳо, LeetCode-style машқҳо ва тайёрӣ ба собесаи техникӣ барои ширкатҳои BigTech. Mock-интервюҳо, менторинг ва супоришҳои амалӣ.",
       requirements: "Дониши Python ё C++, ноутбук, интернет, вақти ҷиддӣ"
@@ -55,19 +55,14 @@ const Academy = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center gap-2 mb-4">
-              <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-yellow-400 rounded-full"></div>
-              <span className="text-blue-400 font-medium text-sm uppercase tracking-wider">
-                Amiri Academy
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
               <span className="text-gradient bg-gradient-to-r from-blue-400 via-purple-400 to-yellow-400">
-                Ҳаёти нав бо
+                AMIRI Academy
               </span>
-              <br />
-              Барномасозӣ!
             </h1>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-6 font-medium">
+              Ҳаёти нав бо Барномасозӣ!
+            </p>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Дарсҳои амалӣ ва ментори шахсӣ барои омӯзиши технологияҳои муосир
             </p>
