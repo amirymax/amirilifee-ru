@@ -41,7 +41,7 @@ const Academy = () => {
   };
 
   const handleTelegramClick = () => {
-    window.open("https://t.me/AmiriCode", "_blank");
+    window.open("https://t.me/amirilifee", "_blank");
   };
 
   return (
@@ -67,41 +67,29 @@ const Academy = () => {
             </p>
           </motion.div>
 
-          {/* Features Checklist */}
+          {/* Features */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="max-w-md mx-auto mb-12"
+            className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            <div className="bg-white/95 rounded-2xl p-8 shadow-xl border-l-4 border-purple-500 backdrop-blur-sm">
-              <ul className="space-y-4">
-                <li className="flex items-center">
-                  <span className="text-green-500 text-xl mr-3">✅</span>
-                  <span className="font-bold text-gray-800 text-lg">Дастрасии абадӣ</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 text-xl mr-3">✅</span>
-                  <span className="font-bold text-gray-800 text-lg">Ментори шахсӣ</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 text-xl mr-3">✅</span>
-                  <span className="font-bold text-gray-800 text-lg">Дастгирии 24/7</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 text-xl mr-3">✅</span>
-                  <span className="font-bold text-gray-800 text-lg">Видеодарсҳои амалӣ</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 text-xl mr-3">✅</span>
-                  <span className="font-bold text-gray-800 text-lg">Гурӯҳи дастгирӣ</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-500 text-xl mr-3">✅</span>
-                  <span className="font-bold text-gray-800 text-lg">Сертификат пас аз анҷом</span>
-                </li>
-              </ul>
-            </div>
+            <Badge variant="secondary" className="px-4 py-2 text-sm">
+              <Smartphone className="w-4 h-4 mr-2" />
+              Mobile-Friendly
+            </Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm">
+              <Wifi className="w-4 h-4 mr-2" />
+              Дастрасии абадӣ
+            </Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm">
+              <Clock className="w-4 h-4 mr-2" />
+              24/7 Дастгирӣ
+            </Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm">
+              <Heart className="w-4 h-4 mr-2" />
+              Ментори шахсӣ
+            </Badge>
           </motion.div>
         </div>
       </section>
@@ -174,7 +162,7 @@ const Academy = () => {
 
                     <Button
                       onClick={() => handlePurchaseClick(course)}
-                      className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white font-bold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                      className="w-full bg-gradient-to-r from-blue-600 to-yellow-500 hover:from-blue-700 hover:to-yellow-600 text-white font-bold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                     >
                       Харидан
                     </Button>
