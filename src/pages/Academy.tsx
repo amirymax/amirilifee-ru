@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Smartphone, Wifi, Clock, Heart } from "lucide-react";
+import { Check, ExternalLink, Smartphone, Wifi, Clock, Heart } from "lucide-react";
 
 const Academy = () => {
   const [selectedCourse, setSelectedCourse] = useState<null | typeof courses[0]>(null);
@@ -13,25 +13,143 @@ const Academy = () => {
 
   const courses = [
     {
-      title: "Python аз 0 + Telegram-бот",
+      title: ">_ CODE: Python",
+      price: "490",
+      strikePrice: "600",
+      currency: "TJS",
       image: "/lovable-uploads/bbb02758-f381-4d59-8a17-6d073e8d98e9.png",
-      price: "399 TJS",
-      description: "Асосҳои Python: синтаксис, структураҳо, OOP, кор бо файлҳо. Telegram Bot API: aiogram, командаҳо, клавиатураҳо ва кор бо медиа. Дастрасии абадӣ, видеодарсҳо, супоришҳо, ментори шахсӣ ва гурӯҳ барои саволу ҷавоб.",
-      requirements: "Ноутбук ё телефон, интернет, вақт, хоҳиши омӯзиш"
+      description: " Python аз 0 + Сохтани Telegram-ботҳо",
+      topics: [
+        { text: "Асосҳои Python, Структураҳои додаҳо", included: true },
+        { text: "Синтаксис, Типҳо", included: true },
+        { text: "Кор бо ададҳо, сатрҳо", included: true },
+        { text: "Рӯйхат (list) ва луғат (dict)", included: true },
+        { text: "Функсияҳо, модулҳо, JSON", included: true },
+        { text: "Барномасозии Объектӣ OOP", included: true },
+        { text: "Ботсозӣ бо Aiogram", included: true },
+      ],
+      whatYouGet: [
+        { text: "Дастрасии абадӣ (1 бор пардохт)", included: true },
+        { text: "Дарсҳои видеоӣ + маводи амалӣ", included: true },
+        { text: "Ментори шахсӣ, гурӯҳи саволу ҷавоб", included: true },
+        { text: "Тестҳо, машқҳо", included: true },
+        { text: "Зангҳои гурӯҳӣ", included: true },
+      ],
+      requirements: [
+        { text: "Ноутбук ё телефон", included: true },
+        { text: "Интернет", included: true },
+        { text: "Вақти озод", included: true },
+        { text: "Хоҳиши омӯзиш", included: true },
+      ],
+      
+      cardClass: "bg-gray-900 text-white border-gray-700",
+      buttonClass: "bg-white text-gray-900 hover:bg-gray-100",
+      descriptionClass: "text-white"
     },
     {
-      title: "Вебсайт бо Истифодаи AI",
+      title: ">_ Web AI: lowCODE",
+      price: "590",
+      strikePrice: "700",
+      currency: "TJS",
       image: "/lovable-uploads/9466b3fd-b2f6-4a52-8a7a-2b5960b320fb.png",
-      price: "399 TJS",
-      description: "Таҳияи веб бо AI (Tilda, Framer, ChatGPT, Midjourney). Генерацияи контент, UX/UI, API, чатботҳо ва автоматизатсия. Дарсҳои видеоӣ, амалия, дастгирӣ ва сохтани сайти шахсӣ ё MVP.",
-      requirements: "Ноутбук, интернет, вақт, хоҳиши эҷод"
+      description: "Вебсайт бо Истифодаи AI (No-Code + Low-Code",
+      // requirements: "Ноутбук, интернет, вақт, хоҳиши эҷод",
+      topics: [
+        { text: "Cохтани вебсайт бо Зеҳни Сунъӣ", included: true },
+        { text: "ChatGPT | Claude AI", included: true },
+        { text: "Lovable.Dev, Bolt.New", included: true },
+        { text: "VS Code & Cursor", included: true },
+        { text: "Генерацияи контент", included: true },
+        { text: "Интегратсия бо Telegram Bot API", included: true },
+        { text: "Автоматизатсияи формаҳои заявка", included: true },
+      ],
+      
+      whatYouGet: [
+        { text: "Дастрасии абадӣ (1 бор пардохт)", included: true },
+        { text: "Созиши 3+ сайт бо дасти худ", included: true },
+        { text: "Ментори шахсӣ, гурӯҳи саволу ҷавоб", included: true },
+        { text: "Маводи иловагӣ ва AI-платформаҳо", included: true },
+        { text: "Зангҳои гурӯҳӣ", included: true },
+        
+      ],
+
+      requirements: [
+        { text: "Ноутбук/Компютер", included: true },
+        { text: "Интернет, вақти озод", included: true },
+        { text: "Вақти озод", included: true },
+        { text: "Хоҳиши эҷод ва омӯзиш", included: true },
+      ],
+      cardClass: "bg-white text-gray-900 border-2 border-primary shadow-xl relative",
+      buttonClass: "bg-primary text-white hover:bg-primary/90",
+      descriptionClass: "text-gray-900"
     },
     {
-      title: "Алгоритмҳо ва BigTech",
+      title: ">_ Алгоритм-CODE",
+      price: "349",
+      strikePrice: "500",
+      currency: "TJS",
       image: "/lovable-uploads/025a29d9-7daa-4ed7-bd69-bcceb903f302.png",
-      price: "399 TJS",
-      description: "Алгоритмҳои асосӣ, структураҳои додаҳо, LeetCode-style машқҳо ва тайёрӣ ба собесаи техникӣ барои ширкатҳои BigTech. Mock-интервюҳо, менторинг ва супоришҳои амалӣ.",
-      requirements: "Дониши Python ё C++, ноутбук, интернет, вақти ҷиддӣ"
+      description: " Алгоритм, Структураҳои додаҳо ва Таёрӣ ба Интервюи Компанияҳои Бузурги IT (BigTech)",
+      // requirements: "Дониши Python ё C++, ноутбук, интернет, вақти ҷиддӣ",
+      topics: [
+        { text: "Алгоритмҳои асосӣ: ҷустуҷӯ, сортировка", included: true },
+        { text: "Рекурсия, Барномасозии динамикӣ DP", included: true },
+        { text: "Рӯйхат (list), стек,  дарахт, графҳо", included: true },
+        { text: "Омодагӣ ба саволҳои техникӣ ва real-case analysis", included: true },
+        { text: "Фикркунии алгоритмӣ", included: true },
+        
+      ],
+      whatYouGet: [
+        { text: "Дастрасии абадӣ (1 бор пардохт)", included: true },
+        { text: "Машқҳои LeetCode-style", included: true },
+        { text: "Ментори шахсӣ, гурӯҳи саволу ҷавоб", included: true },
+        { text: "Mock interviews", included: true },
+        { text: "Зангҳои гурӯҳӣ", included: true },
+        { text: "Баррасии кодҳо", included: true },
+      ],
+      requirements: [
+        { text: "Ноутбук/Компютер", included: true },
+        { text: "Интернет, вақт", included: true },
+        { text: "Дониши ибтидоӣ аз Python", included: true },
+        { text: "Зангҳои гурӯҳӣ", included: true },
+      ],
+      cardClass: "bg-purple-900 text-white border-red-500",
+      buttonClass: "bg-white text-purple-900 hover:bg-gray-100",
+      descriptionClass: "text-white"
+    },
+    {
+      title: ">_ Пакети Пурра❗️",
+      price: "1200",
+      strikePrice: "490 + 590 + 349 = 1429",
+      currency: "TJS",
+      image: "full.png",
+      description: "❗️Ҳамаи курсҳо якҷоя бо тахфифи 200 СОМОНӢ❗️",
+      // requirements: "Дониши Python ё C++, ноутбук, интернет, вақти ҷиддӣ",
+      topics: [
+        { text: "Алгоритмҳои асосӣ: ҷустуҷӯ, сортировка", included: true },
+        { text: "Рекурсия, Барномасозии динамикӣ DP", included: true },
+        { text: "Рӯйхат (list), стек,  дарахт, графҳо", included: true },
+        { text: "Омодагӣ ба саволҳои техникӣ ва real-case analysis", included: true },
+        { text: "Фикркунии алгоритмӣ", included: true },
+        
+      ],
+      whatYouGet: [
+        { text: "Дастрасии абадӣ (1 бор пардохт)", included: true },
+        { text: "Машқҳои LeetCode-style", included: true },
+        { text: "Ментори шахсӣ, гурӯҳи саволу ҷавоб", included: true },
+        { text: "Mock interviews", included: true },
+        { text: "Зангҳои гурӯҳӣ", included: true },
+        { text: "Баррасии кодҳо", included: true },
+      ],
+      requirements: [
+        { text: "Ноутбук/Компютер", included: true },
+        { text: "Интернет, вақт", included: true },
+        { text: "Дониши ибтидоӣ аз Python", included: true },
+        { text: "Зангҳои гурӯҳӣ", included: true },
+      ],
+      cardClass: "bg-purple-900 text-white border-red-500",
+      buttonClass: "bg-white text-purple-900 hover:bg-gray-100",
+      descriptionClass: "text-white"
     }
   ];
 
@@ -41,7 +159,7 @@ const Academy = () => {
   };
 
   const handleTelegramClick = () => {
-    window.open("https://t.me/amirilifee", "_blank");
+    window.open("https://t.me/amiricode", "_blank");
   };
 
   return (
@@ -130,39 +248,88 @@ const Academy = () => {
                 className="group perspective-1000"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="h-full glass border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden relative backdrop-blur-xl bg-gradient-to-br from-background/80 to-background/40 hover:from-background/90 hover:to-background/60">
+                <Card className={`h-full ${course.cardClass} overflow-hidden transition-transform hover:scale-105`}>
                   <div className="relative overflow-hidden">
                     <img
                       src={course.image}
                       alt={course.title}
                       className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 right-4">
-                      <Badge className="bg-gradient-to-r from-blue-500 to-yellow-400 text-white font-bold">
-                        {course.price}
-                      </Badge>
-                    </div>
+
                   </div>
 
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl mb-2">
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-2xl font-bold mb-2">
                       {course.title}
                     </CardTitle>
+
+                    <div className="text-2xl line-through mb-2">
+                      {course.strikePrice}
+                      {course.currency && <span className="text-2xl ml-1">{course.currency}</span>}
+                    </div>
+                    <div className="text-4xl font-bold mb-2">
+                      <u>{course.price}</u>
+                      {course.currency && <span className="text-lg ml-1">{course.currency}</span>}
+                    </div>
+                    <p className="text-sm mt-2">{course.description}</p>
                   </CardHeader>
 
-                  <CardContent className="flex-1 flex flex-col">
-                    <CardDescription className="text-gray-300 text-sm leading-relaxed mb-4 flex-1">
-                      {course.description}
+                  <CardContent className="text-center flex-1 flex flex-col">
+                    <CardDescription className="leading-relaxed mb-4 flex-1">
+                      <p className={`${course.descriptionClass} text-sm space-y-3 mt-2`}>
+                        <b>💯Мавзӯъҳои асосӣ:</b>
+                        </p>
                     </CardDescription>
 
-                    <div className="mb-4">
-                      <p className="text-xs text-gray-400 font-medium mb-2">Талабот:</p>
-                      <p className="text-xs text-gray-300">{course.requirements}</p>
+                    <div className="space-y-3">
+                      {course.topics.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center gap-3">
+                          <Check className="h-5 w-5 text-green-500 flex-shrink-0" />                          
+                          <span className={`text-sm ${!feature.included ? 'opacity-50 line-through' : ''}`}>
+                            {feature.text}
+                          </span>
+                        </div>
+                      ))}
                     </div>
 
+                    <CardDescription className="leading-relaxed mb-4 flex-1">
+                      <p className={`${course.descriptionClass} text-sm space-y-3 mt-2`}>
+                        <b>Чӣ мегирӣ❓</b>
+                        </p>
+                    </CardDescription>
+
+                    <div className="space-y-3">
+                      {course.whatYouGet.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center gap-3">
+                          <Check className="h-5 w-5 text-green-500 flex-shrink-0" />                          
+                          <span className={`text-sm ${!feature.included ? 'opacity-50 line-through' : ''}`}>
+                            {feature.text}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <CardDescription className="leading-relaxed mb-4 flex-1">
+                      <p className={`${course.descriptionClass} text-sm space-y-3 mt-2`}>
+                        <b>📕Талабот:</b>
+                        </p>
+                    </CardDescription>
+
+                    <div className="space-y-3">
+                      {course.requirements.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center gap-3">
+                          <Check className="h-5 w-5 text-green-500 flex-shrink-0" />                          
+                          <span className={`text-sm ${!feature.included ? 'opacity-50 line-through' : ''}`}>
+                            {feature.text}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <br></br>
                     <Button
                       onClick={() => handlePurchaseClick(course)}
-                      className="w-full bg-gradient-to-r from-blue-600 to-yellow-500 hover:from-blue-700 hover:to-yellow-600 text-white font-bold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                      className={`w-full mt-6 ${course.buttonClass}`}
                     >
                       Харидан
                     </Button>
@@ -170,6 +337,8 @@ const Academy = () => {
                 </Card>
               </motion.div>
             ))}
+
+            
           </div>
         </div>
       </section>
@@ -202,7 +371,7 @@ const Academy = () => {
       <footer className="py-8 px-4 border-t border-border/20">
         <div className="container mx-auto text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Amiri Academy. Ҳамаи ҳуқуқҳо маҳфуз аст.
+            © 2025 AMIRI Academy. Ҳамаи ҳуқуқҳо ҳифз шудаанд.
           </p>
         </div>
       </footer>
