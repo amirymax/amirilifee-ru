@@ -340,14 +340,9 @@ const Academy = () => {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
           <br></br>
           {/* <div  className="flex justify-center items-center min-h-screen bg-black px-4 "> */}
           <Card className={`h-full ${full[0].cardClass}  overflow-hidden transition-transform hover:scale-105`}>
-=======
-          <div  className="flex justify-center items-center min-h-screen bg-black px-4 ">
-          <Card className={`w-full ${full[0].cardClass}  overflow-hidden transition-transform hover:scale-105`}>
->>>>>>> 0417a6ee786f8b18938961f8123d179cebf16f4f
                   <div className="relative overflow-hidden">
                     <img
                       src={full[0].image}
