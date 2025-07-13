@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Check, ExternalLink, Smartphone, Wifi, Clock, Heart } from "lucide-react";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 
 const Academy = () => {
   const [selectedCourse, setSelectedCourse] = useState<null | typeof courses[0]>(null);
@@ -176,8 +177,13 @@ const Academy = () => {
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
-              <span className="text-yellow-400">&gt;_ AMIRI</span>{" "}
-              <span className="text-blue-400">Academy</span>
+              <TypingAnimation 
+                text=">_ AMIRI Academy"
+                className="text-yellow-400"
+                typingSpeed={120}
+                deletingSpeed={80}
+                pauseDuration={1500}
+              />
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-6 font-medium">
               Ҳаёти нав бо Барномасозӣ!
