@@ -179,7 +179,6 @@ const Academy = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
               <TypingAnimation 
                 text=">_ AMIRI Academy"
-                className="text-yellow-400"
                 typingSpeed={120}
                 deletingSpeed={80}
                 pauseDuration={1500}

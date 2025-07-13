@@ -52,9 +52,34 @@ export const TypingAnimation = ({
     return () => clearInterval(cursorInterval);
   }, []);
 
+  const renderColoredText = () => {
+    const parts = [
+      { text: ">_ AMIRI", color: "text-yellow-400" },
+      { text: " Academy", color: "text-blue-400" }
+    ];
+    
+    let currentLength = 0;
+    return parts.map((part, index) => {
+      const partStart = currentLength;
+      const partEnd = currentLength + part.text.length;
+      currentLength += part.text.length;
+      
+      if (displayText.length <= partStart) {
+        return null;
+      }
+      
+      const visibleText = displayText.slice(partStart, Math.min(partEnd, displayText.length));
+      return (
+        <span key={index} className={part.color}>
+          {visibleText}
+        </span>
+      );
+    }).filter(Boolean);
+  };
+
   return (
     <span className={className}>
-      {displayText}
+      {renderColoredText()}
       <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
     </span>
   );
