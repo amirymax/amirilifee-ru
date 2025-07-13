@@ -116,14 +116,16 @@ const Academy = () => {
       cardClass: "bg-purple-900 text-white border-red-500",
       buttonClass: "bg-white text-purple-900 hover:bg-gray-100",
       descriptionClass: "text-white"
-    },
+    }
+  ];
+  const full = [
     {
       title: ">_ Пакети Пурра❗️",
       price: "1200",
       strikePrice: "490 + 590 + 349 = 1429",
       currency: "TJS",
       image: "full.png",
-      description: "❗️Ҳамаи курсҳо якҷоя бо тахфифи 200 СОМОНӢ❗️",
+      description: "❗️Ҳамаи курсҳо якҷоя❗️",
       // requirements: "Дониши Python ё C++, ноутбук, интернет, вақти ҷиддӣ",
       topics: [
         { text: "Алгоритмҳои асосӣ: ҷустуҷӯ, сортировка", included: true },
@@ -147,11 +149,11 @@ const Academy = () => {
         { text: "Дониши ибтидоӣ аз Python", included: true },
         { text: "Зангҳои гурӯҳӣ", included: true },
       ],
-      cardClass: "bg-purple-900 text-white border-red-500",
-      buttonClass: "bg-white text-purple-900 hover:bg-gray-100",
-      descriptionClass: "text-white"
+      cardClass: "bg-white text-gray-900 border-2 border-primary shadow-xl relative",
+      buttonClass: "bg-primary text-white hover:bg-primary/90",
+      descriptionClass: "text-gray-900"
     }
-  ];
+  ]
 
   const handlePurchaseClick = (course: typeof courses[0]) => {
     setSelectedCourse(course);
@@ -248,7 +250,7 @@ const Academy = () => {
                 className="group perspective-1000"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className={`h-full ${course.cardClass} overflow-hidden transition-transform hover:scale-105`}>
+                <Card className={`h-full ${course.cardClass} overflow-hidden transition-transform hover:scale-105 ${index === courses.length - 1 && "md:mx-auto"}`}>
                   <div className="relative overflow-hidden">
                     <img
                       src={course.image}
@@ -337,9 +339,53 @@ const Academy = () => {
                 </Card>
               </motion.div>
             ))}
-
-            
           </div>
+          <div  className="flex justify-center items-center min-h-screen bg-black px-4 ">
+          <Card className={`h-full ${full[0].cardClass}  overflow-hidden transition-transform hover:scale-105`}>
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={full[0].image}
+                      alt={full[0].title}
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+
+
+                  </div>
+
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-2xl font-bold mb-2">
+                      {full[0].title}
+                    </CardTitle>
+
+                    <div className="text-2xl line-through mb-2">
+                      {full[0].strikePrice}
+                      {full[0].currency && <span className="text-2xl ml-1">{full[0].currency}</span>}
+                    </div>
+                    <div className="text-4xl font-bold mb-2">
+                      <u>{full[0].price}</u>
+                      {full[0].currency && <span className="text-lg ml-1">{full[0].currency}</span>}
+                    </div>
+                    <p className="text-sm mt-2">{full[0].description}</p>
+                    <b>тахфиф 200 СОМОНӢ💶</b>
+                  </CardHeader>
+
+                  <CardContent className="text-center flex-1 flex flex-col">
+                    <CardDescription className="leading-relaxed mb-4 flex-1">
+                      <p className={`${full[0].descriptionClass} text-sm space-y-3 mt-2`}>
+                        
+                        <b>💯Доступ ҳамешагӣ, ҳамаи курсҳо!</b>
+                        </p>
+                    </CardDescription>
+
+                    <Button
+                      onClick={() => handlePurchaseClick(full[0])}
+                      className={`w-full mt-6 ${full[0].buttonClass}`}
+                    >
+                      Харидан
+                    </Button>
+                  </CardContent>
+            </Card>
+            </div>
         </div>
       </section>
 
