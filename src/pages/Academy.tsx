@@ -340,8 +340,9 @@ const Academy = () => {
               </motion.div>
             ))}
           </div>
-          <div  className="flex justify-center items-center min-h-screen bg-black px-4 ">
-          <Card className={`w-full max-w-2xl ${full[0].cardClass}  overflow-hidden transition-transform hover:scale-105`}>
+          <br></br>
+          {/* <div  className="flex justify-center items-center min-h-screen bg-black px-4 "> */}
+          <Card className={`h-full ${full[0].cardClass}  overflow-hidden transition-transform hover:scale-105`}>
                   <div className="relative overflow-hidden">
                     <img
                       src={full[0].image}
@@ -385,7 +386,7 @@ const Academy = () => {
                     </Button>
                   </CardContent>
             </Card>
-            </div>
+            {/* </div> */}
         </div>
       </section>
 
