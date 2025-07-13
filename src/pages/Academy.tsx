@@ -18,7 +18,7 @@ const Academy = () => {
       price: "490",
       strikePrice: "600",
       currency: "TJS",
-      image: "/lovable-uploads/bbb02758-f381-4d59-8a17-6d073e8d98e9.png",
+      image: "code_python.png",
       description: " Python аз 0 + Сохтани Telegram-ботҳо",
       topics: [
         { text: "Асосҳои Python, Структураҳои додаҳо", included: true },
@@ -52,7 +52,7 @@ const Academy = () => {
       price: "590",
       strikePrice: "700",
       currency: "TJS",
-      image: "/lovable-uploads/9466b3fd-b2f6-4a52-8a7a-2b5960b320fb.png",
+      image: "web_ai.png",
       description: "Вебсайт бо Истифодаи AI (No-Code + Low-Code",
       // requirements: "Ноутбук, интернет, вақт, хоҳиши эҷод",
       topics: [
@@ -89,7 +89,7 @@ const Academy = () => {
       price: "349",
       strikePrice: "500",
       currency: "TJS",
-      image: "/lovable-uploads/025a29d9-7daa-4ed7-bd69-bcceb903f302.png",
+      image: "algo_code.png",
       description: " Алгоритм, Структураҳои додаҳо ва Таёрӣ ба Интервюи Компанияҳои Бузурги IT (BigTech)",
       // requirements: "Дониши Python ё C++, ноутбук, интернет, вақти ҷиддӣ",
       topics: [
